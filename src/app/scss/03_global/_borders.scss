@@ -6,6 +6,11 @@
         $border-radius: list.nth(utilities.$border-radiuses, $i);
         --mlt-sys-border-radius-#{$i}:#{$border-radius};
     }
+
+    @for $i from 1 through list.length(utilities.$border-widths) {
+      $border-width: list.nth(utilities.$border-widths, $i);
+      --mlt-sys-border-width-#{$i}:#{$border-width};
+    }
 }
 
 
@@ -14,5 +19,12 @@
   $border-radius: list.nth(utilities.$border-radiuses, $i);
   .g--border-radius#{$i}{
       border-radius: var(--mlt-sys-border-radius-#{$i});
+  }
+}
+
+@for $i from 1 through list.length(utilities.$border-widths) {
+  $border-width: list.nth(utilities.$border-widths, $i);
+  .g--border-width#{$i}{
+      border-width: var(--mlt-sys-border-width-#{$i});
   }
 }

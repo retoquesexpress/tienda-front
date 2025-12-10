@@ -1,0 +1,30 @@
+<h1 class="l-center l-center--horizontal">Listado de servicios</h1>
+ 
+<div class="servicios">
+<table class="servicios__table">
+  <tr>
+    <th>Id</th>
+    <th>Nombre</th>
+    <th>Descripcion</th>
+    <th>Precio</th>
+    <th>Gestión <button class="servicios__button servicios__button--green" routerLink="/nuevo">Añadir Servicio</button>
+</th>
+  </tr>
+  <tbody>
+    @for (servicio of servicios; track servicio.id){
+    <tr>
+      <td>{{ servicio.id }}</td>
+      <td>{{ servicio.nombre }}</td>
+      <td>{{ servicio.descripcion }}</td>
+      <td>{{ servicio.precio }}€</td>
+      <td>
+        <button class="servicios__button servicios__button--blue" routerLink="/visualizar">Ver</button>
+        <button class="servicios__button servicios__button--red" routerLink="/eliminar">Borrar</button>
+        <button class="servicios__button servicios__button--yellow"routerLink="/modificar">Modificar</button>
+      </td>
+    </tr>
+    }
+  </tbody>
+</table>
+</div>
+

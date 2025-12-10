@@ -11,4 +11,7 @@
   .g--color-#{$color-type}{
     color: var(--mlt-sys-#{$color-type}) !important;
   }
+  .g--bg-#{$color-type}{
+    background-color: var(--mlt-sys-#{$color-type}) !important;
+  }
 }

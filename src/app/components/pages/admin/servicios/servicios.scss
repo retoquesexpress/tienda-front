@@ -1,0 +1,65 @@
+.servicios {
+    --servicios-button-padding: var(--mlt-sys-padding-3);
+    --servicios-button-margin: var(--mlt-sys-margin-2);
+    --servicios-button-color: var(--mlt-sys-light);
+    --servicios-button-border-radius: var(--mlt-sys-border-radius-15);
+    --servicios-button-font-size: var(--mlt-sys-font-size-5);
+
+    --servicios-button-green-bg-color: var(--mlt-sys-green);
+    --servicios-button-blue-bg-color: var(--mlt-sys-blue);
+    --servicios-button-red-bg-color: var(--mlt-sys-red);
+    --servicios-button-yellow-bg-color: var(--mlt-sys-yellow);
+    --servicios-modifier-color: var(--mlt-sys-dark);
+
+
+    --servicios-table-width: var(--mlt-sys-border-radius-10);
+    --servicios-table-margin-top: var(--mlt-sys-margin-4);
+    --servicios-table-border-width: var(--mlt-sys-border-width-1);
+    --servicios-table-padding: var(--mlt-sys-padding-2);
+    --servicios-table-border-color: var(--mlt-sys-primary);
+    --servicios-table-th-bg-color: var(--mlt-sys-light);
+
+
+    &__button {
+        padding: var(--servicios-button-padding);
+        margin: var(--servicios-button-margin);
+        border: none;
+        border-radius: var(--servicios-button-border-radius);
+        color: var(--servicios-button-color);
+        cursor: pointer;
+        font-size: var(--servicios-button-font-size);
+    
+        &--green {
+        background-color: var(--servicios-button-green-bg-color);
+        }
+    
+        &--blue {
+        background-color: var(--servicios-button-blue-bg-color);
+        }
+    
+        &--red {
+        background-color: var(--servicios-button-red-bg-color);
+        }
+    
+        &--yellow {
+        background-color: var(--servicios-button-yellow-bg-color);
+        color: var(--servicios-modifier-color);
+        }
+    }
+    
+    &__table {
+        width: var(--servicios-table-width);
+        border-collapse: collapse;
+        margin-top: var(--servicios-table-margin-top);
+    
+        th, td {
+        border: var(--servicios-table-border-width) solid var(--servicios-table-border-color);
+        padding: var(--servicios-table-padding);
+        text-align: left;
+        }
+    
+        th {
+        background-color: var(--servicios-table-th-bg-color);
+        }
+    }
+}

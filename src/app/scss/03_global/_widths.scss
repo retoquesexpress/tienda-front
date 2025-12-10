@@ -4,14 +4,14 @@
 :root{
     @for $i from 1 through list.length(utilities.$width-sizes) {
         $width-size: list.nth(utilities.$width-sizes, $i);
-        --mlt-sys-width-size-#{$i}:#{$width-size};
+        --mlt-sys-width-#{$i}:#{$width-size};
     }
 }
 
 
 @for $i from 1 through list.length(utilities.$width-sizes) {
   $width-size: list.nth(utilities.$width-sizes, $i);
-  .g--width-size-#{$i}{
-      width: var(--mlt-sys-width-size-#{$i});
+  .g--width-#{$i}{
+      width: var(--mlt-sys-width-#{$i});
   }
 }
