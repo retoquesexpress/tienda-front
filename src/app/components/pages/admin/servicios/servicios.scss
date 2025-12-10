@@ -20,6 +20,20 @@
     --servicios-table-th-bg-color: var(--mlt-sys-light);
 
 
+    --servicios-card-width: var(--mlt-sys-width-170);
+    --servicios-card-border-radius: var(--mlt-sys-border-radius-2);
+    --servicios-card-background: var(--mlt-sys-light);
+    --servicios-card-padding: var(--mlt-sys-padding-11);
+    --servicios-card-margin: var(--mlt-sys-margin-9);
+    
+    width: var(--servicios-card-width);
+    border-radius: var(--servicios-card-border-radius);
+    background-color: var(--servicios-card-background);
+    padding: var(--servicios-card-padding);
+    margin: var(--servicios-card-margin);
+
+
+
     &__button {
         padding: var(--servicios-button-padding);
         margin: var(--servicios-button-margin);

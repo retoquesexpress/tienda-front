@@ -1,0 +1,85 @@
+.card {
+    --card-width: var(--mlt-sys-width-17);
+    --card-border-radius: var(--mlt-sys-border-radius-1);
+    --card-background: var(--mlt-sys-secondary);
+    --card-padding: var(--mlt-sys-padding-6);
+    --card-margin: var(--mlt-sys-margin-6);
+    --card-shadow: var(--mlt-sys-shadow-large);
+
+    --card-image-width: var(--mlt-sys-width-13);
+    --card-image-border-radius: var(--mlt-sys-border-radius-1);
+
+
+    --card-content-padding: var(--mlt-sys-padding-4);
+
+    --card-title-font-size: var(--mlt-sys-font-size-5);
+    --card-title-color: var(--mlt-sys-light);
+
+    --card-description-font-size: var(--mlt-sys-font-size-3);
+    --card-description-color: var(--mlt-sys-primary);
+
+    --card-price-font-size: var(--mlt-sys-font-size);
+    --card-price-color: var(--mlt-sys-light);
+
+    --card-button-width: var(--mlt-sys-width-12);
+    --card-button-padding: var(--mlt-sys-padding-4);
+    --card-button-background: var(--mlt-sys-green);
+    --card-button-color: var(--mlt-sys-light);
+    --card-button-border-radius: var(--mlt-sys-border-radius-12);
+
+  width: var(--card-width);
+  border-radius: var(--card-border-radius);
+  background-color: var(--card-background);
+  padding: var(--card-padding);
+  margin: var(--card-margin);
+  box-shadow: var(--card-shadow);
+
+
+
+  &__image {
+    width: var(--card-image-width);
+    margin: auto;
+    img {
+      display: block;
+      width: var(--card-image-width);
+      border-radius: var(--card-border-radius);
+      height: auto;
+    }
+  }
+
+  &__content {
+    padding: var(--card-content-padding);
+  }
+
+  &__title {
+    font-size: var(--card-title-font-size);
+    font-weight: bold;
+    color: var(--card-title-color);
+  }
+
+  &__description {
+    font-size: var(--card-description-font-size);
+    color: var(--card-description-color);
+  }
+
+  &__price {
+    font-size: var(--card-price-font-size);
+    font-weight: bold;
+    color: var(--card-price-color);
+    text-align: right;
+  }
+
+  &__button {
+    display: block;
+    width: var(--card-button-width);
+    margin: auto;
+    padding: var(--card-button-padding);
+    background-color: var(--card-button-background);
+    color: var(--card-button-color);
+    border: none;
+    border-radius: var(--card-button-border-radius);
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+  }
+}

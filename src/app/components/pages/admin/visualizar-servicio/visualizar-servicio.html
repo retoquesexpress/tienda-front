@@ -1,1 +1,15 @@
-<p>visualizar-servicio works!</p>
+@if (servicio$ | async; as servicio) {
+<div class="l-center l-center--total">
+  <div class="card">
+    <div class="card__image">
+      <img src="assets/{{ servicio.pictureUrl }}.jpg" />
+    </div>
+    <div class="card__content">
+      <h5 class="card__title">{{ servicio.nombre }}</h5>
+      <p class="card__description">{{ servicio.descripcion }}</p>
+      <p class="card__price">{{ servicio.precio }}€</p>
+    </div>
+    <button class="card__button" routerLink="/servicios">Volver</button>
+  </div>
+</div>
+}
