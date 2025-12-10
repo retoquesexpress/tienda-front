@@ -1,16 +1,14 @@
-@use "sass:list";
+@use "sass:map";
 @use '../01_utilities/_variables' as utilities;
 
-:root{
-    @for $i from 1 through list.length(utilities.$height-sizes) {
-        $height: list.nth(utilities.$height-sizes, $i);
-        --mlt-sys-height-#{$i}:#{$height};
-    }
+:root {
+  @each $key, $value in utilities.$height-sizes {
+    --mlt-sys-height-#{$key}: #{$value};
+  }
 }
 
-@for $i from 1 through list.length(utilities.$height-sizes) {
-    $height: list.nth(utilities.$height-sizes, $i);
-    .g--height#{$i}{
-        height: var(--mlt-sys-height-#{$i});
-    }
+@each $key, $value in utilities.$height-sizes {
+  .g--height-#{$key} {
+    height: var(--mlt-sys-height-#{$key});
+  }
 }

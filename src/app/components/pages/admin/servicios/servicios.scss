@@ -1,9 +1,9 @@
 .servicios {
-    --servicios-button-padding: var(--mlt-sys-padding-3);
-    --servicios-button-margin: var(--mlt-sys-margin-2);
+    --servicios-button-padding: var(--mlt-sys-padding-15);
+    --servicios-button-margin: var(--mlt-sys-margin-4);
     --servicios-button-color: var(--mlt-sys-light);
     --servicios-button-border-radius: var(--mlt-sys-border-radius-15);
-    --servicios-button-font-size: var(--mlt-sys-font-size-5);
+    --servicios-button-font-size: var(--mlt-sys-font-size-16);
 
     --servicios-button-green-bg-color: var(--mlt-sys-green);
     --servicios-button-blue-bg-color: var(--mlt-sys-blue);
@@ -12,25 +12,17 @@
     --servicios-modifier-color: var(--mlt-sys-dark);
 
 
-    --servicios-table-width: var(--mlt-sys-border-radius-10);
+    --servicios-table-width: var(--mlt-sys-border-radius-100p);
     --servicios-table-margin-top: var(--mlt-sys-margin-4);
     --servicios-table-border-width: var(--mlt-sys-border-width-1);
-    --servicios-table-padding: var(--mlt-sys-padding-2);
+    --servicios-table-padding: var(--mlt-sys-padding-15);
     --servicios-table-border-color: var(--mlt-sys-primary);
     --servicios-table-th-bg-color: var(--mlt-sys-light);
 
 
-    --servicios-card-width: var(--mlt-sys-width-170);
-    --servicios-card-border-radius: var(--mlt-sys-border-radius-2);
-    --servicios-card-background: var(--mlt-sys-light);
-    --servicios-card-padding: var(--mlt-sys-padding-11);
-    --servicios-card-margin: var(--mlt-sys-margin-9);
+    --servicios-card-margin: var(--mlt-sys-margin-150);
     
-    width: var(--servicios-card-width);
-    border-radius: var(--servicios-card-border-radius);
-    background-color: var(--servicios-card-background);
-    padding: var(--servicios-card-padding);
-    margin: var(--servicios-card-margin);
+    margin-left: var(--servicios-card-margin);
 
 
 

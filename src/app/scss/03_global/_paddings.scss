@@ -1,16 +1,14 @@
-@use "sass:list";
+@use "sass:map";
 @use '../01_utilities/_variables' as utilities;
 
-:root{
-    @for $i from 1 through list.length(utilities.$padding-sizes) {
-        $padding: list.nth(utilities.$padding-sizes, $i);
-        --mlt-sys-padding-#{$i}:#{$padding};
-    }
+:root {
+  @each $key, $value in utilities.$padding-sizes {
+    --mlt-sys-padding-#{$key}: #{$value};
+  }
 }
 
-@for $i from 1 through list.length(utilities.$padding-sizes) {
-  $padding: list.nth(utilities.$padding-sizes, $i);
-  .g--padding#{$i}{
-      padding: var(--mlt-sys-padding-#{$i});
+@each $key, $value in utilities.$padding-sizes {
+  .g--padding-#{$key} {
+    padding: var(--mlt-sys-padding-#{$key});
   }
 }

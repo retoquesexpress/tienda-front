@@ -1,31 +1,31 @@
 .card {
-    --card-width: var(--mlt-sys-width-17);
-    --card-border-radius: var(--mlt-sys-border-radius-1);
+    --card-width: var(--mlt-sys-width-350);
+    --card-border-radius: var(--mlt-sys-border-radius-15);
     --card-background: var(--mlt-sys-secondary);
-    --card-padding: var(--mlt-sys-padding-6);
-    --card-margin: var(--mlt-sys-margin-6);
+    --card-padding: var(--mlt-sys-padding-12);
+    --card-margin: var(--mlt-sys-margin-4);
     --card-shadow: var(--mlt-sys-shadow-large);
 
-    --card-image-width: var(--mlt-sys-width-13);
-    --card-image-border-radius: var(--mlt-sys-border-radius-1);
+    --card-image-width: var(--mlt-sys-width-100p);
+    --card-image-border-radius: var(--mlt-sys-border-radius-15);
 
 
-    --card-content-padding: var(--mlt-sys-padding-4);
+    --card-content-padding: var(--mlt-sys-padding-12);
 
-    --card-title-font-size: var(--mlt-sys-font-size-5);
+    --card-title-font-size: var(--mlt-sys-font-size-16);
     --card-title-color: var(--mlt-sys-light);
 
-    --card-description-font-size: var(--mlt-sys-font-size-3);
+    --card-description-font-size: var(--mlt-sys-font-size-12);
     --card-description-color: var(--mlt-sys-primary);
 
-    --card-price-font-size: var(--mlt-sys-font-size);
+    --card-price-font-size: var(--mlt-sys-font-size-12);
     --card-price-color: var(--mlt-sys-light);
 
-    --card-button-width: var(--mlt-sys-width-12);
-    --card-button-padding: var(--mlt-sys-padding-4);
+    --card-button-width: var(--mlt-sys-width-100p);
+    --card-button-padding: var(--mlt-sys-padding-12);
     --card-button-background: var(--mlt-sys-green);
     --card-button-color: var(--mlt-sys-light);
-    --card-button-border-radius: var(--mlt-sys-border-radius-12);
+    --card-button-border-radius: var(--mlt-sys-border-radius-15);
 
   width: var(--card-width);
   border-radius: var(--card-border-radius);

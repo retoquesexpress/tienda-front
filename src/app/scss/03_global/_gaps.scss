@@ -1,16 +1,14 @@
-@use "sass:list";
+@use "sass:map";
 @use '../01_utilities/_variables' as utilities;
 
-:root{
-    @for $i from 1 through list.length(utilities.$gap-sizes) {
-        $gap: list.nth(utilities.$gap-sizes, $i);
-        --mlt-sys-gap-#{$i}:#{$gap};
-    }
+:root {
+  @each $key, $value in utilities.$gap-sizes {
+    --mlt-sys-gap-#{$key}: #{$value};
+  }
 }
 
-@for $i from 1 through list.length(utilities.$gap-sizes) {
-    $gap: list.nth(utilities.$gap-sizes, $i);
-    .g--gap-#{$i}{
-        gap: var(--mlt-sys-gap-#{$i});
-    }
+@each $key, $value in utilities.$gap-sizes {
+  .g--gap-#{$key} {
+    gap: var(--mlt-sys-gap-#{$key});
+  }
 }

@@ -1,30 +1,25 @@
-@use "sass:list";
+@use "sass:map";
 @use '../01_utilities/_variables' as utilities;
 
-:root{
-    @for $i from 1 through list.length(utilities.$border-radiuses) {
-        $border-radius: list.nth(utilities.$border-radiuses, $i);
-        --mlt-sys-border-radius-#{$i}:#{$border-radius};
-    }
+:root {
+  @each $key, $value in utilities.$border-radiuses {
+    --mlt-sys-border-radius-#{$key}: #{$value};
+  }
 
-    @for $i from 1 through list.length(utilities.$border-widths) {
-      $border-width: list.nth(utilities.$border-widths, $i);
-      --mlt-sys-border-width-#{$i}:#{$border-width};
-    }
-}
-
-
-
-@for $i from 1 through list.length(utilities.$border-radiuses) {
-  $border-radius: list.nth(utilities.$border-radiuses, $i);
-  .g--border-radius#{$i}{
-      border-radius: var(--mlt-sys-border-radius-#{$i});
+  @each $key, $value in utilities.$border-widths {
+    --mlt-sys-border-width-#{$key}: #{$value};
   }
 }
 
-@for $i from 1 through list.length(utilities.$border-widths) {
-  $border-width: list.nth(utilities.$border-widths, $i);
-  .g--border-width#{$i}{
-      border-width: var(--mlt-sys-border-width-#{$i});
+@each $key, $value in utilities.$border-radiuses {
+  .g--border-radius-#{$key} {
+    border-radius: var(--mlt-sys-border-radius-#{$key});
   }
 }
+
+@each $key, $value in utilities.$border-widths {
+  .g--border-width-#{$key} {
+    border-width: var(--mlt-sys-border-width-#{$key});
+  }
+}
+

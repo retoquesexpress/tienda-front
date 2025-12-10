@@ -1,36 +1,55 @@
 $colors: (
-    primary:#571E2D,
-    secondary:#B99880,
-    light:#F8F6F0,
-    dark:#0F0F0F,
-    green:#4CAF50,
-    red:#f91100,
-    blue:#008CBA,
-    yellow:#FF9800,
+  primary: #571e2d,
+  secondary: #b99880,
+  light: #f8f6f0,
+  dark: #0f0f0f,
+  green: #4caf50,
+  red: #f91100,
+  blue: #008cba,
+  yellow: #ff9800,
 );
 
+$font-sizes: (
+  12: 12px,
+  16: 16px,
+);
 
-// borrar las que no usemos
-$font-sizes: ( 10px, 12px, 14px, 16px, 20px, 24px, 32px);
+$margin-sizes: (
+  1: 1px,
+  4: 4px,
+  150: 150px,
+);
 
-$margin-sizes: ( 0px, 4px, 8px, 12px, 16px, 20px, 24px, 32px,40px);
+$width-sizes: (
+  80: 80px,
+  350: 350px,
+  100p: 100%,
+);
 
-$width-sizes: ( 0px,1px,5px,10px,20px,25px,30px,40px,50px, 100px, 150px, 200px, 250px, 300px, 350px, 400px, 450px, 500px, 100%);
+$height-sizes: (
+  80: 80px,
+);
 
-$height-sizes: ( 50px, 100px, 150px, 200px, 250px, 300px, 350px, 400px, 450px, 500px);
+$border-radiuses: (
+  15: 15px,
+);
 
-$border-radiuses: ( 10%, 20%, 30%, 40%, 50%,60%,70%,80%,90%,100%, 2px, 4px, 6px, 8px, 10px, 12px, 16px, 20px);
+$border-widths: (
+  1: 1px,
+);
 
-$border-widths: ( 1px, 2px, 3px, 4px, 5px, 6px, 8px, 10px);
+$padding-sizes: (
+  12: 12px,
+  15: 15px,
+);
 
-$padding-sizes: ( 0px, 4px, 8px, 12px, 16px, 20px, 24px, 32px,50px,80px,100px,120px);
-
-$gap-sizes: ( 0px, 4px, 8px, 12px, 16px, 20px, 24px, 32px,50px,80px);
+$gap-sizes: (
+  10: 10px,
+);
 
 $shadows: (
-    none: none,
-    small: 0 1px 3px rgba(0, 0, 0, 0.12), 
-    medium: 0 4px 6px rgba(0, 0, 0, 0.1), 
-    large: 0 10px 20px rgba(0, 0, 0, 0.15)
+  none: none,
+  small: 0 1px 3px rgba(0, 0, 0, 0.12),
+  medium: 0 4px 6px rgba(0, 0, 0, 0.1),
+  large: 0 10px 20px rgba(0, 0, 0, 0.15),
 );
-

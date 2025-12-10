@@ -1,13 +1,13 @@
 .header {
-    --header-padding: var(--mlt-sys-padding-8);
-    --header-height: var(--mlt-sys-height-1);
+    --header-padding: var(--mlt-sys-padding-12);
+    --header-height: var(--mlt-sys-height-80);
     --header-bg-color: var(--mlt-sys-primary);
 
-    --header-logo-width: var(--mlt-sys-width-10);
+    --header-logo-width: var(--mlt-sys-width-80);
     --header-logo-margin-left: var(--mlt-sys-margin-1);
 
     --header-nav-gap: var(--mlt-sys-gap-10);
-    --header-nav-font-size: var(--mlt-sys-font-size-5);
+    --header-nav-font-size: var(--mlt-sys-font-size-16);
     --header-nav-link-color: var(--mlt-sys-light);
 
     display: flex;
