@@ -1,0 +1,16 @@
+.boton{
+    --boton-padding: var(--mlt-sys-padding-15);
+    --boton-margin: var(--mlt-sys-margin-4);
+    --boton-color: var(--mlt-sys-light);
+    --boton-bg-color: var(--mlt-sys-primary);
+    --boton-border-radius: var(--mlt-sys-border-radius-15);
+    --boton-font-size: var(--mlt-sys-font-size-16);
+
+        padding: var(--boton-padding);
+        margin: var(--boton-margin);
+        border: none;
+        border-radius: var(--boton-border-radius);
+        color: var(--boton-color);
+        background-color: var(--boton-bg-color);
+        font-size: var(--boton-font-size);
+}

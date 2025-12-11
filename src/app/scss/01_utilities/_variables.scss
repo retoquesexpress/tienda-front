@@ -5,24 +5,27 @@ $colors: (
   dark: #0f0f0f,
   green: #4caf50,
   red: #f91100,
-  blue: #008cba,
+  blue: #0399cc,
   yellow: #ff9800,
 );
 
 $font-sizes: (
   12: 12px,
   16: 16px,
+  30: 30px,
 );
 
 $margin-sizes: (
   1: 1px,
   4: 4px,
+  10: 10px,
   150: 150px,
 );
 
 $width-sizes: (
   80: 80px,
   350: 350px,
+  400: 400px,
   100p: 100%,
 );
 
@@ -31,6 +34,7 @@ $height-sizes: (
 );
 
 $border-radiuses: (
+  4: 4px,
   15: 15px,
 );
 

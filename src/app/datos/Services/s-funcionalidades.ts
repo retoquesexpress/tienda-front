@@ -9,6 +9,7 @@ import { IServicios } from '../Models/i-servicios';
 export class SFuncionalidades {
 
  private miUrl = 'http://localhost:3000/services';
+ private micategoriaUrl = 'http://localhost:3000/category';
  private miHttp= inject(HttpClient);
 
    
@@ -17,19 +18,16 @@ export class SFuncionalidades {
   }
   getServiceById(id: string):Observable<IServicios> {
     return this.miHttp.get<IServicios>(this.miUrl+"/"+id);
-  }
-  //COMPROBAR SI ES CON SERVICES O CATEGORYSERVICE
-  // getServiceByCategoria(categoria: string):Observable<IServicios[]> {
-  //   return this.miHttp.get<IServicios[]>(this.miUrl+"/?categoria="+categoria);
-  // }
- 
+  } 
   postService(service: IServicios):Observable<IServicios> {
-    return this.miHttp.post<IServicios>(this.miUrl, service);
+    return this.miHttp.post<IServicios>(this.miUrl, service); 
   }
   deleteService(id:string) {
-    return this.miHttp.delete(this.miUrl+"/"+id);
+    return this.miHttp.delete<IServicios>(this.miUrl+"/"+id);
   }
-  putService(service: IServicios) {
+  updateService(service: IServicios) {
     return this.miHttp.put(this.miUrl+"/"+service.id, service);
   }
+
+
  }

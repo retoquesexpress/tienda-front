@@ -1,1 +1,12 @@
-<p>nuevo-servicio works!</p>
+<div class="formulario">
+  <h2 class="formulario__title">Añade Tu Servicio</h2>
+  <form class="formulario__form" (ngSubmit)="postServicio()" #myForm="ngForm">
+    <input class="formulario__form-input" type="text" id="idCategoria" name="id" [(ngModel)]="servicio.id" placeholder="ID">
+    <input class="formulario__form-input" type="text" id="nombre" name="nombre" [(ngModel)]="servicio.nombre" placeholder="Nombre">
+    <input class="formulario__form-input" type="text" id="descripcion" name="descripcion" [(ngModel)]="servicio.descripcion" placeholder="Descripción">
+    <input class="formulario__form-input" type="number" id="precio" name="precio" [(ngModel)]="servicio.precio" placeholder="Precio">
+    <input class="formulario__form-input" type="text" id="pictureUrl" name="pictureUrl" [(ngModel)]="servicio.pictureUrl" placeholder="URL de la imagen">
+    <button class="formulario__form-button" type="submit">Añadir</button>
+    <button class="formulario__form-button formulario__form-button--volver" type="button" routerLink="/servicios">Volver</button>
+  </form>
+</div>

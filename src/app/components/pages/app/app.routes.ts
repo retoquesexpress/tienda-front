@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { Inicio } from '../user/inicio/inicio';
+import { Inicio } from '../inicio/inicio';
 import { Servicios } from '../admin/servicios/servicios';
 import { VisualizarServicio } from '../admin/visualizar-servicio/visualizar-servicio';
 import { NuevoServicio } from '../admin/nuevo-servicio/nuevo-servicio';

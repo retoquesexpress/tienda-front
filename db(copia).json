@@ -97,13 +97,6 @@
       "descripcion": "Peinado especial para eventos y ocasiones importantes",
       "precio": 35,
       "pictureUrl": "p5"
-    },
-    {
-      "id": "z1",
-      "nombre": "Pruebas",
-      "descripcion": "Prueba",
-      "precio": 1,
-      "pictureUrl": "z1"
     }
   ],
   "categoryServices": [

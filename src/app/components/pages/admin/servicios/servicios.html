@@ -1,5 +1,5 @@
 <div>
-  <h1 class="l-center l-center--horizontal">Listado de servicios</h1>
+  <h1 class="l-center l-center__horizontal">Listado de servicios</h1>
   <div class="servicios">
     <table class="servicios__table">
       <tr>
@@ -15,7 +15,7 @@
         </th>
       </tr>
       <tbody>
-        @for (servicio of servicios$|async; track servicio.id){
+        @for (servicio of servicios; track servicio.id){
         <tr>
           <td>{{ servicio.id }}</td>
           <td>{{ servicio.nombre }}</td>
@@ -30,21 +30,16 @@
             </button>
             <button
               class="servicios__button servicios__button--red"
-              routerLink="/eliminar/{{ servicio.id }}"
+              (click)="funcionEliminar(servicio.id)"
             >
               Borrar
             </button>
-            <button
+            <button 
               class="servicios__button servicios__button--yellow"
               routerLink="/modificar/{{ servicio.id }}"
             >
               Modificar
             </button>
-            <app-c-button
-              texto="Patata"
-              color="blue"
-              routerLink="/visualizar/{{ servicio.id }}"
-            ></app-c-button>
           </td>
         </tr>
         }
