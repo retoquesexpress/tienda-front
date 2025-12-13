@@ -1,4 +1,7 @@
 .servicios {
+    --servicios-titulos-font-family: var(--mlt-sys-font-titulos);
+    --servicios-textos-font-family: var(--mlt-sys-font-textos1);
+
     --servicios-button-padding: var(--mlt-sys-padding-15);
     --servicios-button-margin: var(--mlt-sys-margin-4);
     --servicios-button-color: var(--mlt-sys-light);
@@ -34,6 +37,7 @@
         color: var(--servicios-button-color);
         cursor: pointer;
         font-size: var(--servicios-button-font-size);
+        font-family: var(--servicios-titulos-font-family);
     
         &--green {
         background-color: var(--servicios-button-green-bg-color);
@@ -62,6 +66,7 @@
         border: var(--servicios-table-border-width) solid var(--servicios-table-border-color);
         padding: var(--servicios-table-padding);
         text-align: left;
+        font-family: var(--servicios-titulos-font-family);
         }
     
         th {

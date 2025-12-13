@@ -9,7 +9,7 @@ import { IServicios } from '../Models/i-servicios';
 export class SFuncionalidades {
 
  private miUrl = 'http://localhost:3000/services';
- private micategoriaUrl = 'http://localhost:3000/category';
+ private micategoriaUrl = 'http://localhost:3000/categories';
  private miHttp= inject(HttpClient);
 
    

@@ -1,4 +1,7 @@
 .formulario {
+    --formulario-titulos-font-family: var(--mlt-sys-font-titulos);
+    --formulario-textos-font-family: var(--mlt-sys-font-textos1);
+
     --formulario-width: var(--mlt-sys-width-400);
     --formulario-margin: var(--mlt-sys-margin-150) auto;
     --formulario-padding: var(--mlt-sys-padding-15);
@@ -35,6 +38,7 @@
     font-size: var(--formulario-title-font-size);
     margin-bottom: var(--formulario-title-margin-bottom);
     color: var(--formulario-title-color);
+    font-family: var(--formulario-titulos-font-family);
   }
 
   &__form {
@@ -47,6 +51,7 @@
       border: var(--formulario-input-border);
       border-radius: var(--formulario-input-border-radius);
       font-size: var(--formulario-input-font-size);
+      font-family: var(--formulario-titulos-font-family);
     }
 
     &-button {
@@ -56,6 +61,7 @@
       color: var(--formulario-button-color);
       border: none;
       border-radius: var(--formulario-button-border-radius);
+      font-family: var(--formulario-titulos-font-family);
 
       &--volver {
         background-color: var(--mlt-sys-blue);
