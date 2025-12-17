@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { inject, Injectable} from '@angular/core';
 import { Observable } from 'rxjs';
 import { IServicios } from '../Models/i-servicios';
+import { ICategorias } from '../Models/i-categorias';
 
 @Injectable({
   providedIn: 'root'
@@ -30,4 +31,20 @@ export class SFuncionalidades {
   }
 
 
- }
+  getAllCategories():Observable<ICategorias[]> {
+    return this.miHttp.get<ICategorias[]>(this.micategoriaUrl);
+  }  
+  getCategoryById(id: string):Observable<ICategorias> {
+    return this.miHttp.get<ICategorias>(this.micategoriaUrl+"/"+id);
+  } 
+  postCategory(category: ICategorias):Observable<ICategorias> {
+    return this.miHttp.post<ICategorias>(this.micategoriaUrl, category); 
+  }
+  deleteCategory(id:string) {
+    return this.miHttp.delete<ICategorias>(this.micategoriaUrl+"/"+id);
+  }
+  updateCategory(category: ICategorias) {
+    return this.miHttp.put(this.micategoriaUrl+"/"+category.id, category);
+  }
+
+}

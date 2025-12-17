@@ -1,0 +1,9 @@
+<div class="formulario">
+  <h2 class="formulario__title">Modifica Tu Categoria</h2>
+  <div class="formulario__form">
+    <input class="formulario__form-input" type="text" id="nombre" name="nombre" [(ngModel)]="categoria.name" placeholder="Nombre">
+    <button class="formulario__form-button" (click)="putCategoria()">Modificar</button>
+    <button class="formulario__form-button formulario__form-button--volver" type="button" routerLink="/categorias">Volver</button>
+
+  </div>
+</div>

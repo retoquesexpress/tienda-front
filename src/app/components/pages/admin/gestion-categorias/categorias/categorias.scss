@@ -1,0 +1,73 @@
+.categorias {
+    --categorias-titulos-font-family: var(--mlt-sys-font-titulos);
+    --categorias-textos-font-family: var(--mlt-sys-font-textos1);
+
+    --categorias-button-padding: var(--mlt-sys-padding-15);
+    --categorias-button-margin: var(--mlt-sys-margin-4);
+    --categorias-button-color: var(--mlt-sys-light);
+    --categorias-button-border-radius: var(--mlt-sys-border-radius-15);
+    --categorias-button-font-size: var(--mlt-sys-font-size-16);
+
+    --categorias-button-green-bg-color: var(--mlt-sys-green);
+    --categorias-button-blue-bg-color: var(--mlt-sys-blue);
+    --categorias-button-red-bg-color: var(--mlt-sys-red);
+    --categorias-button-yellow-bg-color: var(--mlt-sys-yellow);
+    --categorias-modifier-color: var(--mlt-sys-dark);
+
+
+    --categorias-table-width: var(--mlt-sys-border-radius-100p);
+    --categorias-table-margin-top: var(--mlt-sys-margin-4);
+    --categorias-table-border-width: var(--mlt-sys-border-width-1);
+    --categorias-table-padding: var(--mlt-sys-padding-15);
+    --categorias-table-border-color: var(--mlt-sys-primary);
+    --categorias-table-th-bg-color: var(--mlt-sys-light);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__button {
+        padding: var(--categorias-button-padding);
+        margin: var(--categorias-button-margin);
+        border: none;
+        border-radius: var(--categorias-button-border-radius);
+        color: var(--categorias-button-color);
+        cursor: pointer;
+        font-size: var(--categorias-button-font-size);
+        font-family: var(--categorias-titulos-font-family);
+
+        &--green {
+        background-color: var(--categorias-button-green-bg-color);
+        }
+    
+        &--blue {
+        background-color: var(--categorias-button-blue-bg-color);
+        }
+    
+        &--red {
+        background-color: var(--categorias-button-red-bg-color);
+        }
+    
+        &--yellow {
+        background-color: var(--categorias-button-yellow-bg-color);
+        color: var(--categorias-modifier-color);
+        }
+    }
+    
+    &__table {
+        width: var(--categorias-table-width);
+        border-collapse: collapse;
+        margin-top: var(--categorias-table-margin-top);
+
+        th, td {
+        border: var(--categorias-table-border-width) solid var(--categorias-table-border-color);
+        padding: var(--categorias-table-padding);
+        text-align: left;
+        font-family: var(--categorias-titulos-font-family);
+        }
+    
+        th {
+        background-color: var(--categorias-table-th-bg-color);
+        }
+    }
+}

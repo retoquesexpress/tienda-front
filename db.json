@@ -1,13 +1,6 @@
 {
   "services": [
     {
-      "id": "u1",
-      "nombre": "Esmalte normal",
-      "descripcion": "Aplicación de esmalte tradicional en uñas",
-      "precio": 5,
-      "pictureUrl": "u1"
-    },
-    {
       "id": "u2",
       "nombre": "Semipermanente",
       "descripcion": "Aplicación de esmalte semipermanente para mayor duración",

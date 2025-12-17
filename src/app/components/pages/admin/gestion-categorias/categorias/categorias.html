@@ -1,0 +1,45 @@
+<div>
+  <h1 class="l-center l-center__horizontal g--font-family-titulos">Listado de categorias</h1>
+  <div class="categorias">
+    <table class="categorias__table">
+      <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>
+          Gestión
+          <button class="categorias__button categorias__button--green g--font-family-titulos" routerLink="/nueva-categoria">
+            Añadir Categoría
+          </button>
+        </th>
+      </tr>
+      <tbody>
+        @for (categoria of categorias; track categoria.id){
+        <tr>
+          <td>{{ categoria.id }}</td>
+          <td>{{ categoria.name }}</td>
+          <td>
+            <button
+              class="categorias__button categorias__button--blue"
+              routerLink="/servicios"
+            >
+              Ver
+            </button>
+            <button
+              class="categorias__button categorias__button--red"
+              (click)="funcionEliminar(categoria.id)"
+            >
+              Borrar
+            </button>
+            <button 
+              class="categorias__button categorias__button--yellow"
+              routerLink="/modificar-categoria/{{ categoria.id }}"
+            >
+              Modificar
+            </button>
+          </td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>
