@@ -7,6 +7,7 @@
         <th>Nombre</th>
         <th>Descripcion</th>
         <th>Precio</th>
+        <th>Categoria</th>
         <th>
           Gestión
           <button class="servicios__button servicios__button--green g--font-family-titulos" routerLink="/nuevo">
@@ -15,28 +16,29 @@
         </th>
       </tr>
       <tbody>
-        @for (servicio of servicios; track servicio.id){
+        @for (servicio of servicios; track servicio.id_service){
         <tr>
-          <td>{{ servicio.id }}</td>
-          <td>{{ servicio.nombre }}</td>
-          <td>{{ servicio.descripcion }}</td>
-          <td>{{ servicio.precio }}€</td>
+          <td>{{ servicio.id_service }}</td>
+          <td>{{ servicio.name }}</td>
+          <td>{{ servicio.description }}</td>
+          <td>{{ servicio.price }}€</td>
+          <td>{{ servicio.category.name}}</td>
           <td>
             <button
               class="servicios__button servicios__button--blue"
-              routerLink="/visualizar/{{ servicio.id }}"
+              routerLink="/visualizar/{{ servicio.id_service }}"
             >
               Ver
             </button>
             <button
               class="servicios__button servicios__button--red"
-              (click)="funcionEliminar(servicio.id)"
+              (click)="funcionEliminar(servicio.id_service)"
             >
               Borrar
             </button>
             <button 
               class="servicios__button servicios__button--yellow"
-              routerLink="/modificar/{{ servicio.id }}"
+              routerLink="/modificar/{{ servicio.id_service }}"
             >
               Modificar
             </button>

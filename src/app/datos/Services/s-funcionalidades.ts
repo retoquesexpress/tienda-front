@@ -9,8 +9,8 @@ import { ICategorias } from '../Models/i-categorias';
 })
 export class SFuncionalidades {
 
- private miUrl = 'http://localhost:3000/services';
- private micategoriaUrl = 'http://localhost:3000/categories';
+ private miUrl = 'http://localhost:8080/api/services';
+ private micategoriaUrl = 'http://localhost:8080/api/categories';
  private miHttp= inject(HttpClient);
 
    
@@ -27,7 +27,7 @@ export class SFuncionalidades {
     return this.miHttp.delete<IServicios>(this.miUrl+"/"+id);
   }
   updateService(service: IServicios) {
-    return this.miHttp.put(this.miUrl+"/"+service.id, service);
+    return this.miHttp.put(this.miUrl+"/"+service.id_service, service);
   }
 
 
@@ -44,7 +44,7 @@ export class SFuncionalidades {
     return this.miHttp.delete<ICategorias>(this.micategoriaUrl+"/"+id);
   }
   updateCategory(category: ICategorias) {
-    return this.miHttp.put(this.micategoriaUrl+"/"+category.id, category);
+    return this.miHttp.put(this.micategoriaUrl+"/"+category.id_category, category);
   }
 
 }

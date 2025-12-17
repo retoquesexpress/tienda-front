@@ -1,7 +1,10 @@
+import { ICategorias } from "./i-categorias";
+
 export interface IServicios {
-    id: string;
-    nombre: string;
-    descripcion: string;
-    precio: number;
-    pictureUrl: string;
+  id_service: string;
+  name: string;
+  description: string;
+  price: number;
+  pictureUrl: string;
+  category: ICategorias;
 }

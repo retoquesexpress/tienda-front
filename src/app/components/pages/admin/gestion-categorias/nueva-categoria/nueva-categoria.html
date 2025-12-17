@@ -1,7 +1,6 @@
 <div class="formulario">
   <h2 class="formulario__title">Añade Tu Categoria</h2>
   <form class="formulario__form" (ngSubmit)="postCategoria()" #myForm="ngForm">
-    <input class="formulario__form-input" type="text" id="idCategoria" name="id" [(ngModel)]="categoria.id" placeholder="ID">
     <input class="formulario__form-input" type="text" id="nombre" name="nombre" [(ngModel)]="categoria.name" placeholder="Nombre">
     <button class="formulario__form-button" type="submit">Añadir</button>
     <button class="formulario__form-button formulario__form-button--volver" type="button" routerLink="/categorias">Volver</button>

@@ -13,9 +13,9 @@
         </th>
       </tr>
       <tbody>
-        @for (categoria of categorias; track categoria.id){
+        @for (categoria of categorias; track categoria.id_category){
         <tr>
-          <td>{{ categoria.id }}</td>
+          <td>{{ categoria.id_category }}</td>
           <td>{{ categoria.name }}</td>
           <td>
             <button
@@ -26,13 +26,13 @@
             </button>
             <button
               class="categorias__button categorias__button--red"
-              (click)="funcionEliminar(categoria.id)"
+              (click)="funcionEliminar(categoria.id_category)"
             >
               Borrar
             </button>
             <button 
               class="categorias__button categorias__button--yellow"
-              routerLink="/modificar-categoria/{{ categoria.id }}"
+              routerLink="/modificar-categoria/{{ categoria.id_category }}"
             >
               Modificar
             </button>

@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { SFuncionalidades } from '../../../../datos/Services/s-funcionalidades';
+import { SFuncionalidades } from '../../../../../datos/Services/s-funcionalidades';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
-import { IServicios } from '../../../../datos/Models/i-servicios';
+import { IServicios } from '../../../../../datos/Models/i-servicios';
 
 @Component({
   selector: 'app-modificar-servicio',

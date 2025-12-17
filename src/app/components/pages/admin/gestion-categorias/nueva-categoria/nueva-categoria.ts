@@ -12,7 +12,7 @@ import { SFuncionalidades } from '../../../../../datos/Services/s-funcionalidade
 })
 export class NuevaCategoria {
   categoria: ICategorias = { 
-    id: '',
+    id_category: 0,
     name: '' };
 
   constructor(private mihttp: SFuncionalidades, private router: Router) {}

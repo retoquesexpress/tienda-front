@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { IServicios } from '../../../../datos/Models/i-servicios';
-import { SFuncionalidades } from '../../../../datos/Services/s-funcionalidades';
+import { IServicios } from '../../../../../datos/Models/i-servicios';
+import { SFuncionalidades } from '../../../../../datos/Services/s-funcionalidades';
 import { Router, RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
@@ -12,11 +12,13 @@ import { FormsModule } from '@angular/forms';
 })
 export class NuevoServicio {
   servicio: IServicios = { 
-    id: '',
-    nombre: '',
-    descripcion: '',
-    precio: 0,
-    pictureUrl: '' };
+    id_service: '',
+    name: '',
+    description: '',
+    price: 0,
+    pictureUrl: '' ,
+    category: { id_category: 0, name: '' }
+  };
 
   constructor(private mihttp: SFuncionalidades, private router: Router) {}
 

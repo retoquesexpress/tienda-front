@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { SFuncionalidades } from '../../../../datos/Services/s-funcionalidades';
-import { IServicios } from '../../../../datos/Models/i-servicios';
+import { SFuncionalidades } from '../../../../../datos/Services/s-funcionalidades';
+import { IServicios } from '../../../../../datos/Models/i-servicios';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
