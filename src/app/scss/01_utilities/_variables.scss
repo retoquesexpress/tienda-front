@@ -25,6 +25,7 @@ $margin-sizes: (
   4: 4px,
   10: 10px,
   150: 150px,
+  3p: 3%,
 );
 
 $width-sizes: (
@@ -61,4 +62,10 @@ $shadows: (
   small: 0 1px 3px rgba(0, 0, 0, 0.12),
   medium: 0 4px 6px rgba(0, 0, 0, 0.1),
   large: 0 10px 20px rgba(0, 0, 0, 0.15),
+);
+
+
+$font-weights: (
+  600: 600,
+  700: 700,
 );

@@ -8,5 +8,7 @@ import { RouterLink } from '@angular/router';
   styleUrl: './inicio.scss'
 })
 export class Inicio {
-
+  // User = {
+  //   role: 'ADMIN',
+  // };
 }

@@ -112,5 +112,30 @@
       "id": "c3",
       "name": "Peluquería"
     }
+  ],
+
+  "users": [
+    {
+      "id": "1",
+      "name": "Admin",
+      "email": "admin@test.com",
+      "userName": "admin",
+      "password": "1234",
+      "phoneNumber": "123456789",
+      "address": "Calle 1",
+      "birthDate": "2000-01-01",
+      "role": "ADMIN"
+    },
+    {
+      "id": "2",
+      "name": "User",
+      "email": "user@test.com",
+      "userName": "user",
+      "password": "abcd",
+      "phoneNumber": "987654321",
+      "address": "Calle 2",
+      "birthDate": "1999-05-10",
+      "role": "USER"
+    }
   ]
 }
