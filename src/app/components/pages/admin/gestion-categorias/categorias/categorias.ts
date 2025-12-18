@@ -21,7 +21,7 @@ export class Categorias {
 
    }
 
-   funcionEliminar(id:string){
+   funcionEliminar(id:number){
     this.mihttp.deleteCategory(id).subscribe( data=> {
     console.log('Categoría eliminada: ', data);
     console.log("actuaizar");

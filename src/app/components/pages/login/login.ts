@@ -5,47 +5,37 @@ import { LoginService } from '../../../datos/Services/s-login';
 import { Router } from '@angular/router';
 
 
+
 @Component({
   selector: 'app-login',
-  imports: [FormsModule, RouterLink],
+  imports: [FormsModule],
   templateUrl: './login.html',
   styleUrl: './login.scss'
 })
 export class Login {
-  user: User = {
-    id: '',
-    name: '',
-    email: '',
-    userName: '',
-    password: '',
-    phoneNumber: '',
-    address: '',
-    birthDate: new Date(),
-    role: ''
-  }
-  loginService = inject(LoginService);
 
-  ngOnInit() {
-    this.loginService.getAll();
+  loginService = inject(LoginService);
+  router = inject(Router);
+
+  LoginData = {
+    userName: '',
+    password: ''
   }
+
 
 
   login() {
-   
 
-      this.loginService.login(this.user);
-
-      this.loginService.isLogged$.subscribe(isLogged => {
-        if (isLogged) {
-          this.router.navigate(['/inicio']);
-        } else {
-          alert('Usuario o contraseña incorrectos');
-          this.router.navigate(['/']);
-
-        }
-      });
+    this.loginService.login(this.LoginData.userName, this.LoginData.password).subscribe({
+      next: data => {
+        this.loginService.saveToken(data.token);
+        this.router.navigate(['/inicio']);
+      },
+      error: err => {
+        console.log(err);
+        alert('Usuario o contraseña incorrectos');
+        this.router.navigate(['/']);
+      }
+    });
   }
-
-    router = inject(Router);
-
 }

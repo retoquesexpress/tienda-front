@@ -17,13 +17,13 @@ export class SFuncionalidades {
   getAllServices():Observable<IServicios[]> {
     return this.miHttp.get<IServicios[]>(this.miUrl);
   }
-  getServiceById(id: string):Observable<IServicios> {
+  getServiceById(id: number):Observable<IServicios> {
     return this.miHttp.get<IServicios>(this.miUrl+"/"+id);
   } 
   postService(service: IServicios):Observable<IServicios> {
     return this.miHttp.post<IServicios>(this.miUrl, service); 
   }
-  deleteService(id:string) {
+  deleteService(id:number) {
     return this.miHttp.delete<IServicios>(this.miUrl+"/"+id);
   }
   updateService(service: IServicios) {
@@ -34,13 +34,13 @@ export class SFuncionalidades {
   getAllCategories():Observable<ICategorias[]> {
     return this.miHttp.get<ICategorias[]>(this.micategoriaUrl);
   }  
-  getCategoryById(id: string):Observable<ICategorias> {
+  getCategoryById(id: number):Observable<ICategorias> {
     return this.miHttp.get<ICategorias>(this.micategoriaUrl+"/"+id);
   } 
   postCategory(category: ICategorias):Observable<ICategorias> {
     return this.miHttp.post<ICategorias>(this.micategoriaUrl, category); 
   }
-  deleteCategory(id:string) {
+  deleteCategory(id:number) {
     return this.miHttp.delete<ICategorias>(this.micategoriaUrl+"/"+id);
   }
   updateCategory(category: ICategorias) {

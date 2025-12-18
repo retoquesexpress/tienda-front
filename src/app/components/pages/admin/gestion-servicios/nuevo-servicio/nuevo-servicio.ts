@@ -12,7 +12,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class NuevoServicio {
   servicio: IServicios = { 
-    id_service: '',
+    id_service: 0,
     name: '',
     description: '',
     price: 0,

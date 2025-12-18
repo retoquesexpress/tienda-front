@@ -19,7 +19,7 @@ export class Servicios {
     this.cargarServicios();
    }
 
-   funcionEliminar(id:string){
+   funcionEliminar(id:number){
     this.mihttp.deleteService(id).subscribe( data=> {
     console.log('Servicio eliminado: ', data);
     console.log("actuaizar");

@@ -7,14 +7,10 @@ export const loginGuard: CanActivateFn = () => {
   const loginService = inject(LoginService);
   const router = inject(Router);
 
-  return loginService.isLogged$.pipe(
-    map(isLogged => {
-      if (!isLogged) {
-        alert('Necesitas iniciar sesión');
-        router.navigate(['/login']);
-        return false;
-      }
-      return true;
-    })
-  );
+  if (loginService.isRegistered()) {
+    return true;
+  } else {
+    router.navigate(['/']);
+    return false;
+  }
 };
