@@ -11,24 +11,25 @@ import { SFuncionalidades } from '../../../../../datos/Services/s-funcionalidade
   styleUrl: './nueva-categoria.scss'
 })
 export class NuevaCategoria {
-  categoria: ICategorias = { 
-    id_category: 0,
-    name: '' };
+  categoria: ICategorias = {
+    idCategory: 0,
+    name: ''
+  };
 
-  constructor(private mihttp: SFuncionalidades, private router: Router) {}
+  constructor(private mihttp: SFuncionalidades, private router: Router) { }
 
 
 
   postCategoria() {
     this.mihttp.postCategory(this.categoria).subscribe({
       next: data => {
-        console.log("Categoria insertada: " , data);
+        console.log("Categoria insertada: ", data);
         alert('Categoria creada con éxito!');
         this.router.navigate(['/categorias']);
       },
       error: err => console.log(err)
     });
-    
+
   }
 
 }

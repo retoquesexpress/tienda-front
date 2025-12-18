@@ -16,30 +16,22 @@
         </th>
       </tr>
       <tbody>
-        @for (servicio of servicios; track servicio.id_service){
+        @for (servicio of servicios; track servicio.idService){
         <tr>
-          <td>{{ servicio.id_service }}</td>
+          <td>{{ servicio.idService }}</td>
           <td>{{ servicio.name }}</td>
           <td>{{ servicio.description }}</td>
           <td>{{ servicio.price }}€</td>
           <td>{{ servicio.category.name}}</td>
           <td>
-            <button
-              class="servicios__button servicios__button--blue"
-              routerLink="/visualizar/{{ servicio.id_service }}"
-            >
+            <button class="servicios__button servicios__button--blue" routerLink="/visualizar/{{ servicio.idService }}">
               Ver
             </button>
-            <button
-              class="servicios__button servicios__button--red"
-              (click)="funcionEliminar(servicio.id_service)"
-            >
+            <button class="servicios__button servicios__button--red" (click)="funcionEliminar(servicio.idService)">
               Borrar
             </button>
-            <button 
-              class="servicios__button servicios__button--yellow"
-              routerLink="/modificar/{{ servicio.id_service }}"
-            >
+            <button class="servicios__button servicios__button--yellow"
+              routerLink="/modificar/{{ servicio.idService }}">
               Modificar
             </button>
           </td>

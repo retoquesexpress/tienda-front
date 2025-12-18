@@ -7,33 +7,26 @@
         <th>Nombre</th>
         <th>
           Gestión
-          <button class="categorias__button categorias__button--green g--font-family-titulos" routerLink="/nueva-categoria">
+          <button class="categorias__button categorias__button--green g--font-family-titulos"
+            routerLink="/nueva-categoria">
             Añadir Categoría
           </button>
         </th>
       </tr>
       <tbody>
-        @for (categoria of categorias; track categoria.id_category){
+        @for (categoria of categorias; track categoria.idCategory){
         <tr>
-          <td>{{ categoria.id_category }}</td>
+          <td>{{ categoria.idCategory }}</td>
           <td>{{ categoria.name }}</td>
           <td>
-            <button
-              class="categorias__button categorias__button--blue"
-              routerLink="/servicios"
-            >
+            <button class="categorias__button categorias__button--blue" routerLink="/servicios">
               Ver
             </button>
-            <button
-              class="categorias__button categorias__button--red"
-              (click)="funcionEliminar(categoria.id_category)"
-            >
+            <button class="categorias__button categorias__button--red" (click)="funcionEliminar(categoria.idCategory)">
               Borrar
             </button>
-            <button 
-              class="categorias__button categorias__button--yellow"
-              routerLink="/modificar-categoria/{{ categoria.id_category }}"
-            >
+            <button class="categorias__button categorias__button--yellow"
+              routerLink="/modificar-categoria/{{ categoria.idCategory }}">
               Modificar
             </button>
           </td>

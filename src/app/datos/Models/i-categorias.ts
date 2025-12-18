@@ -1,4 +1,4 @@
 export interface ICategorias {
-    id_category: number;
+    idCategory: number;
     name: string;
 }

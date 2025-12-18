@@ -11,29 +11,29 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './nuevo-servicio.scss'
 })
 export class NuevoServicio {
-  servicio: IServicios = { 
-    id_service: 0,
+  servicio: IServicios = {
+    idService: 0,
     name: '',
     description: '',
     price: 0,
-    pictureUrl: '' ,
-    category: { id_category: 0, name: '' }
+    pictureUrl: '',
+    category: { idCategory: 0, name: '' }
   };
 
-  constructor(private mihttp: SFuncionalidades, private router: Router) {}
+  constructor(private mihttp: SFuncionalidades, private router: Router) { }
 
 
 
   postServicio() {
     this.mihttp.postService(this.servicio).subscribe({
       next: data => {
-        console.log("Articulo insertado: " , data);
+        console.log("Articulo insertado: ", data);
         alert('Servicio creado con éxito!');
         this.router.navigate(['/servicios']);
       },
       error: err => console.log(err)
     });
-    
+
   }
 
 }
