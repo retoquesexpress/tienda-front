@@ -6,7 +6,7 @@
   --service-view-secondary: var(--mlt-sys-secondary);
   --service-view-display: flex;
   --service-view-direction: row;
-  --service-view-max-width: var(--mlt-sys-width-900, 900px);
+  --service-view-max-width: var(--mlt-sys-width-900);
   --service-view-margin: auto;
   --service-view-overflow: hidden;
   
@@ -19,43 +19,43 @@
   overflow: var(--service-view-overflow);
   margin: var(--service-view-margin);
 
-  @media (max-width: 768px) {
+  @media (max-width: var(--mlt-sys-width-768)) {
     --service-view-direction-mobile: column;
     flex-direction: var(--service-view-direction-mobile); 
   }
 
   &__media {
-    --service-view__media-position: relative;
-    --service-view__media-flex: 1.2;
-    --service-view__media-overflow: hidden;
+    --service-view-media-position: relative;
+    --service-view-media-flex: 1.2;
+    --service-view-media-overflow: hidden;
 
-    position: var(--service-view__media-position);
-    flex: var(--service-view__media-flex);
-    overflow: var(--service-view__media-overflow);
+    position: var(--service-view-media-position);
+    flex: var(--service-view-media-flex);
+    overflow: var(--service-view-media-overflow);
 
     &::after { 
-      --service-view__media-after-content: '';
-      --service-view__media-after-position: absolute;
-      --service-view__media-after-inset: 0;
-      --service-view__media-after-background: linear-gradient(20deg, rgba(0, 0, 0, 0.3) 0%, transparent 50%);
+      --service-view-media-after-content: '';
+      --service-view-media-after-position: absolute;
+      --service-view-media-after-inset: 0;
+      --service-view-media-after-background: linear-gradient(20deg, rgba(0, 0, 0, 0.3) 0%, transparent 50%);
 
-      content: var(--service-view__media-after-content);
-      position: var(--service-view__media-after-position);
-      inset: var(--service-view__media-after-inset);
-      background: var(--service-view__media-after-background);
+      content: var(--service-view-media-after-content);
+      position: var(--service-view-media-after-position);
+      inset: var(--service-view-media-after-inset);
+      background: var(--service-view-media-after-background);
     }
   }
 
   &__img {
-    --service-view__img-width: var(--mlt-sys-width-100p, 100%);
-    --service-view__img-height: var(--mlt-sys-height-100p, 100%);
-    --service-view__img-object-fit: cover;
-    --service-view__img-transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+    --service-view-img-width: var(--mlt-sys-width-100p);
+    --service-view-img-height: var(--mlt-sys-height-100p);
+    --service-view-img-object-fit: cover;
+    --service-view-img-transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
 
-    width: var(--service-view__img-width);
-    height: var(--service-view__img-height);
-    object-fit: var(--service-view__img-object-fit);
-    transition: var(--service-view__img-transition);
+    width: var(--service-view-img-width);
+    height: var(--service-view-img-height);
+    object-fit: var(--service-view-img-object-fit);
+    transition: var(--service-view-img-transition);
   }
 
   &:hover &__img {
@@ -64,189 +64,187 @@
   }
 
   &__badge {
-    --service-view__badge-position: absolute;
-    --service-view__badge-top: var(--mlt-sys-padding-20, 20px);
-    --service-view__badge-left: var(--mlt-sys-padding-20, 20px);
-    --service-view__badge-z-index: 2;
-    --service-view__badge-bg: rgba(255, 255, 255, 0.9);
-    --service-view__badge-padding-y: var(--mlt-sys-padding-6, 6px);
-    --service-view__badge-padding-x: var(--mlt-sys-padding-15, 15px);
-    --service-view__badge-radius: var(--mlt-sys-border-radius-30, 30px);
-    --service-view__badge-size: var(--mlt-sys-font-size-12, 12px);
-    --service-view__badge-transform: uppercase;
-    --service-view__badge-letter-spacing: 1px;
-    --service-view__badge-font: var(--mlt-sys-font-titulos);
-    --service-view__badge-color: var(--service-view-primary);
+    --service-view-badge-position: absolute;
+    --service-view-badge-top: var(--mlt-sys-padding-20);
+    --service-view-badge-left: var(--mlt-sys-padding-20);
+    --service-view-badge-z-index: 2;
+    --service-view-badge-bg: var(--mlt-sys-lightTransparent);
+    --service-view-badge-padding-y: var(--mlt-sys-padding-6);
+    --service-view-badge-padding-x: var(--mlt-sys-padding-15);
+    --service-view-badge-radius: var(--mlt-sys-border-radius-30);
+    --service-view-badge-size: var(--mlt-sys-font-size-12);
+    --service-view-badge-transform: uppercase;
+    --service-view-badge-letter-spacing: 1px;
+    --service-view-badge-font: var(--mlt-sys-font-titulos);
+    --service-view-badge-color: var(--service-view-primary);
 
-    position: var(--service-view__badge-position);
-    top: var(--service-view__badge-top);
-    left: var(--service-view__badge-left);
-    z-index: var(--service-view__badge-z-index);
-    background: var(--service-view__badge-bg);
-    padding: var(--service-view__badge-padding-y) var(--service-view__badge-padding-x);
-    border-radius: var(--service-view__badge-radius);
-    font-size: var(--service-view__badge-size);
-    text-transform: var(--service-view__badge-transform);
-    letter-spacing: var(--service-view__badge-letter-spacing);
-    font-family: var(--service-view__badge-font);
-    color: var(--service-view__badge-color);
+    position: var(--service-view-badge-position);
+    top: var(--service-view-badge-top);
+    left: var(--service-view-badge-left);
+    z-index: var(--service-view-badge-z-index);
+    background: var(--service-view-badge-bg);
+    padding: var(--service-view-badge-padding-y) var(--service-view-badge-padding-x);
+    border-radius: var(--service-view-badge-radius);
+    font-size: var(--service-view-badge-size);
+    text-transform: var(--service-view-badge-transform);
+    letter-spacing: var(--service-view-badge-letter-spacing);
+    font-family: var(--service-view-badge-font);
+    color: var(--service-view-badge-color);
   }
 
   &__price-float {
-    --service-view__price-float-position: absolute;
-    --service-view__price-float-bottom: var(--mlt-sys-padding-25, 25px);
-    --service-view__price-float-right: var(--mlt-sys-padding-25, 25px);
-    --service-view__price-float-z-index: 2;
-    --service-view__price-float-bg: var(--service-view-primary);
-    --service-view__price-float-color: var(--mlt-sys-light);
-    --service-view__price-float-width: var(--mlt-sys-width-80, 80px);
-    --service-view__price-float-height: var(--mlt-sys-width-80, 80px);
-    --service-view__price-float-display: flex;
-    --service-view__price-float-direction: column;
-    --service-view__price-float-align: center;
-    --service-view__price-float-justify: center;
-    --service-view__price-float-radius: 50%;
-    --service-view__price-float-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    --service-view__price-float-transform: rotate(5deg);
+    --service-view-price-float-position: absolute;
+    --service-view-price-float-bottom: var(--mlt-sys-padding-25);
+    --service-view-price-float-right: var(--mlt-sys-padding-25);
+    --service-view-price-float-z-index: 2;
+    --service-view-price-float-bg: var(--service-view-primary);
+    --service-view-price-float-color: var(--mlt-sys-light);
+    --service-view-price-float-width: var(--mlt-sys-width-80);
+    --service-view-price-float-height: var(--mlt-sys-width-80);
+    --service-view-price-float-display: flex;
+    --service-view-price-float-direction: column;
+    --service-view-price-float-align: center;
+    --service-view-price-float-justify: center;
+    --service-view-price-float-radius: var(--mlt-sys-border-radius-50p);
+    --service-view-price-float-shadow: var(--mlt-sys-shadow-large);
+    --service-view-price-float-transform: rotate(5deg);
 
-    position: var(--service-view__price-float-position);
-    bottom: var(--service-view__price-float-bottom);
-    right: var(--service-view__price-float-right);
-    z-index: var(--service-view__price-float-z-index);
-    background: var(--service-view__price-float-bg);
-    color: var(--service-view__price-float-color);
-    width: var(--service-view__price-float-width);
-    height: var(--service-view__price-float-height);
-    display: var(--service-view__price-float-display);
-    flex-direction: var(--service-view__price-float-direction);
-    align-items: var(--service-view__price-float-align);
-    justify-content: var(--service-view__price-float-justify);
-    border-radius: var(--service-view__price-float-radius);
-    box-shadow: var(--service-view__price-float-shadow);
-    transform: var(--service-view__price-float-transform);
+    position: var(--service-view-price-float-position);
+    bottom: var(--service-view-price-float-bottom);
+    right: var(--service-view-price-float-right);
+    z-index: var(--service-view-price-float-z-index);
+    background: var(--service-view-price-float-bg);
+    color: var(--service-view-price-float-color);
+    width: var(--service-view-price-float-width);
+    height: var(--service-view-price-float-height);
+    display: var(--service-view-price-float-display);
+    flex-direction: var(--service-view-price-float-direction);
+    align-items: var(--service-view-price-float-align);
+    justify-content: var(--service-view-price-float-justify);
+    border-radius: var(--service-view-price-float-radius);
+    box-shadow: var(--service-view-price-float-shadow);
+    transform: var(--service-view-price-float-transform);
 
     .value { 
-      --service-view__price-float-value-size: var(--mlt-sys-font-size-24, 24px);
-      --service-view__price-float-value-weight: bold;
+      --service-view-price-float-value-size: var(--mlt-sys-font-size-24);
+      --service-view-price-float-value-weight: bold;
 
-      font-size: var(--service-view__price-float-value-size); 
-      font-weight: var(--service-view__price-float-value-weight); 
+      font-size: var(--service-view-price-float-value-size); 
+      font-weight: var(--service-view-price-float-value-weight); 
     }
     .symbol { 
-      --service-view__price-float-symbol-size: var(--mlt-sys-font-size-14, 14px);
+      --service-view-price-float-symbol-size: var(--mlt-sys-font-size-14);
 
-      font-size: var(--service-view__price-float-symbol-size); 
+      font-size: var(--service-view-price-float-symbol-size); 
     }
   }
 
  
   &__content {
-    --service-view__content-flex: 1;
-    --service-view__content-padding: var(--mlt-sys-padding-50, 50px);
-    --service-view__content-display: flex;
-    --service-view__content-direction: column;
-    --service-view__content-justify: center;
-    --service-view__content-background: linear-gradient(to bottom right, var(--mlt-sys-light), var(--mlt-sys-secondaryLight));
+    --service-view-content-flex: 1;
+    --service-view-content-padding: var(--mlt-sys-padding-50);
+    --service-view-content-display: flex;
+    --service-view-content-direction: column;
+    --service-view-content-justify: center;
+    --service-view-content-background: linear-gradient(to bottom right, var(--mlt-sys-light), var(--mlt-sys-secondaryLight));
 
-    flex: var(--service-view__content-flex);
-    padding: var(--service-view__content-padding);
-    display: var(--service-view__content-display);
-    flex-direction: var(--service-view__content-direction);
-    justify-content: var(--service-view__content-justify);
-    background: var(--service-view__content-background);
+    flex: var(--service-view-content-flex);
+    padding: var(--service-view-content-padding);
+    display: var(--service-view-content-display);
+    flex-direction: var(--service-view-content-direction);
+    justify-content: var(--service-view-content-justify);
+    background: var(--service-view-content-background);
   }
 
   &__subtitle {
-    --service-view__subtitle-display: block;
-    --service-view__subtitle-color: var(--service-view-secondary);
-    --service-view__subtitle-transform: uppercase;
-    --service-view__subtitle-letter-spacing: 3px;
-    --service-view__subtitle-size: var(--mlt-sys-font-size-11, 11px);
-    --service-view__subtitle-margin-bottom: var(--mlt-sys-margin-10, 10px);
+    --service-view-subtitle-display: block;
+    --service-view-subtitle-color: var(--service-view-secondary);
+    --service-view-subtitle-transform: uppercase;
+    --service-view-subtitle-letter-spacing: 3px;
+    --service-view-subtitle-size: var(--mlt-sys-font-size-11);
+    --service-view-subtitle-margin-bottom: var(--mlt-sys-margin-10);
 
-    display: var(--service-view__subtitle-display);
-    color: var(--service-view__subtitle-color);
-    text-transform: var(--service-view__subtitle-transform);
-    letter-spacing: var(--service-view__subtitle-letter-spacing);
-    font-size: var(--service-view__subtitle-size);
-    margin-bottom: var(--service-view__subtitle-margin-bottom);
+    display: var(--service-view-subtitle-display);
+    color: var(--service-view-subtitle-color);
+    text-transform: var(--service-view-subtitle-transform);
+    letter-spacing: var(--service-view-subtitle-letter-spacing);
+    font-size: var(--service-view-subtitle-size);
+    margin-bottom: var(--service-view-subtitle-margin-bottom);
   }
 
   &__title {
-    --service-view__title-font: var(--mlt-sys-font-titulos);
-    --service-view__title-size: var(--mlt-sys-font-size-32, 32px);
-    --service-view__title-color: var(--service-view-primary);
-    --service-view__title-margin: 0;
+    --service-view-title-font: var(--mlt-sys-font-titulos);
+    --service-view-title-size: var(--mlt-sys-font-size-32);
+    --service-view-title-color: var(--service-view-primary);
+    --service-view-title-margin: var(--mlt-sys-margin-0);
 
-    font-family: var(--service-view__title-font);
-    font-size: var(--service-view__title-size);
-    color: var(--service-view__title-color);
-    margin: var(--service-view__title-margin);
+    font-family: var(--service-view-title-font);
+    font-size: var(--service-view-title-size);
+    color: var(--service-view-title-color);
+    margin: var(--service-view-title-margin);
   }
 
   &__accent-line {
-    --service-view__accent-line-width: var(--mlt-sys-width-40, 40px);
-    --service-view__accent-line-height: var(--mlt-sys-padding-4, 4px);
-    --service-view__accent-line-bg: var(--service-view-secondary);
-    --service-view__accent-line-margin: var(--mlt-sys-margin-20, 20px) 0;
-    --service-view__accent-line-radius: var(--mlt-sys-border-radius-2, 2px);
-
-    width: var(--service-view__accent-line-width);
-    height: var(--service-view__accent-line-height);
-    background: var(--service-view__accent-line-bg);
-    margin: var(--service-view__accent-line-margin);
-    border-radius: var(--service-view__accent-line-radius);
+    --service-view-accent-line-width: var(--mlt-sys-width-40);
+    --service-view-accent-line-height: var(--mlt-sys-padding-4);
+    --service-view-accent-line-bg: var(--service-view-secondary);
+    --service-view-accent-line-margin: var(--mlt-sys-margin-20) 0;
+    --service-view-accent-line-radius: var(--mlt-sys-border-radius-2);
+    width: var(--service-view-accent-line-width);
+    height: var(--service-view-accent-line-height);
+    background: var(--service-view-accent-line-bg);
+    margin: var(--service-view-accent-line-margin);
+    border-radius: var(--service-view-accent-line-radius);
   }
 
   &__description {
-    --service-view__description-font: var(--mlt-sys-font-textos1);
-    --service-view__description-size: var(--mlt-sys-font-size-17, 17px);
-    --service-view__description-line-height: 1.8;
-    --service-view__description-color: var(--mlt-sys-dark);
-    --service-view__description-margin-bottom: var(--mlt-sys-margin-30, 30px);
-
-    font-family: var(--service-view__description-font);
-    font-size: var(--service-view__description-size);
-    line-height: var(--service-view__description-line-height);
-    color: var(--service-view__description-color);
-    margin-bottom: var(--service-view__description-margin-bottom);
+    --service-view-description-font: var(--mlt-sys-font-textos1);
+    --service-view-description-size: var(--mlt-sys-font-size-17);
+    --service-view-description-line-height: 1.8;
+    --service-view-description-color: var(--mlt-sys-dark);
+    --service-view-description-margin-bottom: var(--mlt-sys-margin-30);
+    font-family: var(--service-view-description-font);
+    font-size: var(--service-view-description-size);
+    line-height: var(--service-view-description-line-height);
+    color: var(--service-view-description-color);
+    margin-bottom: var(--service-view-description-margin-bottom);
   }
 
   &__btn-back {
-    --service-view__btn-back-all: unset;
-    --service-view__btn-back-cursor: pointer;
-    --service-view__btn-back-display: flex;
-    --service-view__btn-back-align: center;
-    --service-view__btn-back-gap: var(--mlt-sys-gap-10, 10px);
-    --service-view__btn-back-color: var(--service-view-primary);
-    --service-view__btn-back-font: var(--mlt-sys-font-titulos);
-    --service-view__btn-back-weight: 600;
-    --service-view__btn-back-transition: transform 0.3s ease;
+    --service-view-btn-back-all: unset;
+    --service-view-btn-back-cursor: pointer;
+    --service-view-btn-back-display: flex;
+    --service-view-btn-back-align: center;
+    --service-view-btn-back-gap: var(--mlt-sys-gap-10);
+    --service-view-btn-back-color: var(--service-view-primary);
+    --service-view-btn-back-font: var(--mlt-sys-font-titulos);
+    --service-view-btn-back-weight: 600;
+    --service-view-btn-back-transition: transform 0.3s ease;
 
-    all: var(--service-view__btn-back-all);
-    cursor: var(--service-view__btn-back-cursor);
-    display: var(--service-view__btn-back-display);
-    align-items: var(--service-view__btn-back-align);
-    gap: var(--service-view__btn-back-gap);
-    color: var(--service-view__btn-back-color);
-    font-family: var(--service-view__btn-back-font);
-    font-weight: var(--service-view__btn-back-weight);
-    transition: var(--service-view__btn-back-transition);
+    all: var(--service-view-btn-back-all);
+    cursor: var(--service-view-btn-back-cursor);
+    display: var(--service-view-btn-back-display);
+    align-items: var(--service-view-btn-back-align);
+    gap: var(--service-view-btn-back-gap);
+    color: var(--service-view-btn-back-color);
+    font-family: var(--service-view-btn-back-font);
+    font-weight: var(--service-view-btn-back-weight);
+    transition: var(--service-view-btn-back-transition);
 
     .icon { 
-      --service-view__btn-back-icon-width: var(--mlt-sys-width-20, 20px);
-      --service-view__btn-back-icon-transition: transform 0.3s ease;
+      --service-view-btn-back-icon-width: var(--mlt-sys-width-20);
+      --service-view-btn-back-icon-transition: transform 0.3s ease;
 
-      width: var(--service-view__btn-back-icon-width); 
-      transition: var(--service-view__btn-back-icon-transition); 
+      width: var(--service-view-btn-back-icon-width); 
+      transition: var(--service-view-btn-back-icon-transition); 
     }
 
     &:hover {
-      --service-view__btn-back-hover-color: var(--service-view-secondary);
-      --service-view__btn-back-icon-hover-transform: translateX(-5px);
+      --service-view-btn-back-hover-color: var(--service-view-secondary);
+      --service-view-btn-back-icon-hover-transform: translateX(-5px);
 
-      color: var(--service-view__btn-back-hover-color);
-      .icon { transform: var(--service-view__btn-back-icon-hover-transform); }
+      color: var(--service-view-btn-back-hover-color);
+      .icon { transform: var(--service-view-btn-back-icon-hover-transform); }
     }
   }
 }

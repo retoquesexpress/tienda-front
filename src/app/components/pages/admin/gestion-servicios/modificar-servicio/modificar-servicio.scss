@@ -19,110 +19,107 @@
   border: var(--formulario-border);
 
   &__header {
-    --formulario__header-bg: var(--formulario-primary);
-    --formulario__header-padding: var(--mlt-sys-padding-30, 30px);
-    --formulario__header-text-align: center;
-    --formulario__header-position: relative;
+    --formulario-header-bg: var(--formulario-primary);
+    --formulario-header-padding: var(--mlt-sys-padding-30);
+    --formulario-header-text-align: center;
+    --formulario-header-position: relative;
 
-    background-color: var(--formulario__header-bg);
-    padding: var(--formulario__header-padding);
-    text-align: var(--formulario__header-text-align);
-    position: var(--formulario__header-position);
+    background-color: var(--formulario-header-bg);
+    padding: var(--formulario-header-padding);
+    text-align: var(--formulario-header-text-align);
+    position: var(--formulario-header-position);
   }
 
   &__title {
-    --formulario__title-color: white;
-    --formulario__title-font: var(--mlt-sys-font-titulos);
-    --formulario__title-size: var(--mlt-sys-font-size-24, 24px);
-    --formulario__title-margin: 0;
-    --formulario__title-letter-spacing: 0.5px;
-
-    color: var(--formulario__title-color);
-    font-family: var(--formulario__title-font);
-    font-size: var(--formulario__title-size);
-    margin: var(--formulario__title-margin);
-    letter-spacing: var(--formulario__title-letter-spacing);
+    --formulario-title-color: white;
+    --formulario-title-font: var(--mlt-sys-font-titulos);
+    --formulario-title-size: var(--mlt-sys-font-size-24);
+    --formulario-title-margin: 0;
+    --formulario-title-letter-spacing: 0.5px;
+    color: var(--formulario-title-color);
+    font-family: var(--formulario-title-font);
+    font-size: var(--formulario-title-size);
+    margin: var(--formulario-title-margin);
+    letter-spacing: var(--formulario-title-letter-spacing);
   }
 
   &__id-badge {
-    --formulario__id-badge-display: inline-block;
-    --formulario__id-badge-bg: rgba(255, 255, 255, 0.2);
-    --formulario__id-badge-color: white;
-    --formulario__id-badge-padding-y: var(--mlt-sys-padding-4, 4px);
-    --formulario__id-badge-padding-x: var(--mlt-sys-padding-12, 12px);
-    --formulario__id-badge-radius: var(--mlt-sys-border-radius-20, 20px);
-    --formulario__id-badge-size: var(--mlt-sys-font-size-11, 11px);
-    --formulario__id-badge-margin-top: var(--mlt-sys-margin-10, 10px);
-    --formulario__id-badge-font: var(--mlt-sys-font-textos1);
+    --formulario-id-badge-display: inline-block;
+    --formulario-id-badge-bg: rgba(255, 255, 255, 0.2);
+    --formulario-id-badge-color: white;
+    --formulario-id-badge-padding-y: var(--mlt-sys-padding-4);
+    --formulario-id-badge-padding-x: var(--mlt-sys-padding-12);
+    --formulario-id-badge-radius: var(--mlt-sys-border-radius-20);
+    --formulario-id-badge-size: var(--mlt-sys-font-size-11);
+    --formulario-id-badge-margin-top: var(--mlt-sys-margin-10);
+    --formulario-id-badge-font: var(--mlt-sys-font-textos1);
 
-    display: var(--formulario__id-badge-display);
-    background: var(--formulario__id-badge-bg);
-    color: var(--formulario__id-badge-color);
-    padding: var(--formulario__id-badge-padding-y) var(--formulario__id-badge-padding-x);
-    border-radius: var(--formulario__id-badge-radius);
-    font-size: var(--formulario__id-badge-size);
-    margin-top: var(--formulario__id-badge-margin-top);
-    font-family: var(--formulario__id-badge-font);
+    display: var(--formulario-id-badge-display);
+    background: var(--formulario-id-badge-bg);
+    color: var(--formulario-id-badge-color);
+    padding: var(--formulario-id-badge-padding-y) var(--formulario-id-badge-padding-x);
+    border-radius: var(--formulario-id-badge-radius);
+    font-size: var(--formulario-id-badge-size);
+    margin-top: var(--formulario-id-badge-margin-top);
+    font-family: var(--formulario-id-badge-font);
   }
 
   &__form {
-    --formulario__form-padding: var(--mlt-sys-padding-40, 40px);
-    --formulario__form-direction: column;
-    --formulario__form-gap: var(--mlt-sys-gap-24, 24px);
+    --formulario-form-padding: var(--mlt-sys-padding-40);
+    --formulario-form-direction: column;
+    --formulario-form-gap: var(--mlt-sys-gap-24);
 
-    padding: var(--formulario__form-padding);
+    padding: var(--formulario-form-padding);
     display: flex;
-    flex-direction: var(--formulario__form-direction);
-    gap: var(--formulario__form-gap);
+    flex-direction: var(--formulario-form-direction);
+    gap: var(--formulario-form-gap);
   }
 
   &__field-group {
-    --formulario__field-group-direction: column;
-    --formulario__field-group-gap: var(--mlt-sys-gap-6, 6px);
+    --formulario-field-group-direction: column;
+    --formulario-field-group-gap: var(--mlt-sys-gap-6);
 
     display: flex;
-    flex-direction: var(--formulario__field-group-direction);
-    gap: var(--formulario__field-group-gap);
+    flex-direction: var(--formulario-field-group-direction);
+    gap: var(--formulario-field-group-gap);
   }
 
   &__label {
-    --formulario__label-font: var(--mlt-sys-font-titulos);
-    --formulario__label-size: var(--mlt-sys-font-size-13, 13px);
-    --formulario__label-weight: 600;
-    --formulario__label-color: var(--mlt-sys-dark);
-    --formulario__label-margin-left: var(--mlt-sys-margin-2, 2px);
-
-    font-family: var(--formulario__label-font);
-    font-size: var(--formulario__label-size);
-    font-weight: var(--formulario__label-weight);
-    color: var(--formulario__label-color);
-    margin-left: var(--formulario__label-margin-left);
+    --formulario-label-font: var(--mlt-sys-font-titulos);
+    --formulario-label-size: var(--mlt-sys-font-size-13);
+    --formulario-label-weight: 600;
+    --formulario-label-color: var(--mlt-sys-dark);
+    --formulario-label-margin-left: var(--mlt-sys-margin-2);
+    font-family: var(--formulario-label-font);
+    font-size: var(--formulario-label-size);
+    font-weight: var(--formulario-label-weight);
+    color: var(--formulario-label-color);
+    margin-left: var(--formulario-label-margin-left);
   }
 
   &__input {
-    --formulario__input-padding-y: var(--mlt-sys-padding-12, 12px);
-    --formulario__input-padding-x: var(--mlt-sys-padding-15, 15px);
-    --formulario__input-border: 2px solid #f0f0f0;
-    --formulario__input-radius: var(--mlt-sys-border-radius-10, 10px);
-    --formulario__input-font: var(--mlt-sys-font-textos1);
-    --formulario__input-size: var(--mlt-sys-font-size-15, 15px);
-    --formulario__input-transition: all 0.2s ease;
-    --formulario__input-focus-border: var(--formulario-accent);
-    --formulario__input-focus-bg: white;
-    --formulario__input-focus-shadow: var(--mlt-sys-shadow-small);
-
-    padding: var(--formulario__input-padding-y) var(--formulario__input-padding-x);
-    border: var(--formulario__input-border);
-    border-radius: var(--formulario__input-radius);
-    font-family: var(--formulario__input-font);
-    font-size: var(--formulario__input-size);
-    transition: var(--formulario__input-transition);
+    --formulario-input-padding-y: var(--mlt-sys-padding-12);
+    --formulario-input-padding-x: var(--mlt-sys-padding-15);
+    --formulario-input-border: 2px solid #f0f0f0;
+    --formulario-input-radius: var(--mlt-sys-border-radius-10);
+    --formulario-input-font: var(--mlt-sys-font-textos1);
+    --formulario-input-size: var(--mlt-sys-font-size-15);
+    --formulario-input-transition: all 0.2s ease;
+    --formulario-input-focus-border: var(--formulario-accent);
+    --formulario-input-focus-bg: white;
+    --formulario-input-focus-shadow: var(--mlt-sys-shadow-small);
+    padding: var(--formulario-input-padding-y) var(--formulario-input-padding-x);
+    border: var(--formulario-input-border);
+    border-radius: var(--formulario-input-radius);
+    font-family: var(--formulario-input-font);
+    font-size: var(--formulario-input-size);
+    transition: var(--formulario-input-transition);
 
     &:focus {
       outline: none;
-      border-color: var(--formulario__input-focus-border);
-      background-color: var(--formulario__input-focus-bg);
-      box-shadow: var(--formulario__input-focus-shadow);
+      border-color: var(--formulario-input-focus-border);
+      background-color: var(--formulario-input-focus-bg);
+      box-shadow: var(--formulario-input-focus-shadow);
     }
 
     &--textarea { min-height: 100px; resize: vertical; }
@@ -130,100 +127,98 @@
   }
 
   &__row {
-    --formulario__row-gap: var(--mlt-sys-gap-20, 20px);
+    --formulario-row-gap: var(--mlt-sys-gap-20);
 
     display: flex;
-    gap: var(--formulario__row-gap);
+    gap: var(--formulario-row-gap);
     & > * { flex: 1; }
   }
 
   &__fieldset {
-    --formulario__fieldset-border: 2px dashed #f0f0f0;
-    --formulario__fieldset-radius: var(--mlt-sys-border-radius-12, 12px);
-    --formulario__fieldset-padding: var(--mlt-sys-padding-20, 20px);
-    --formulario__fieldset-margin: 0;
+    --formulario-fieldset-border: 2px dashed #f0f0f0;
+    --formulario-fieldset-radius: var(--mlt-sys-border-radius-12);
+    --formulario-fieldset-padding: var(--mlt-sys-padding-20);
+    --formulario-fieldset-margin: 0;
 
-    border: var(--formulario__fieldset-border);
-    border-radius: var(--formulario__fieldset-radius);
-    padding: var(--formulario__fieldset-padding);
-    margin: var(--formulario__fieldset-margin);
+    border: var(--formulario-fieldset-border);
+    border-radius: var(--formulario-fieldset-radius);
+    padding: var(--formulario-fieldset-padding);
+    margin: var(--formulario-fieldset-margin);
   }
 
   &__legend {
-    --formulario__legend-font: var(--mlt-sys-font-titulos);
-    --formulario__legend-size: var(--mlt-sys-font-size-12, 12px);
-    --formulario__legend-transform: uppercase;
-    --formulario__legend-color: #999;
-    --formulario__legend-padding: 0 10px;
-
-    font-family: var(--formulario__legend-font);
-    font-size: var(--formulario__legend-size);
-    text-transform: var(--formulario__legend-transform);
-    color: var(--formulario__legend-color);
-    padding: var(--formulario__legend-padding);
+    --formulario-legend-font: var(--mlt-sys-font-titulos);
+    --formulario-legend-size: var(--mlt-sys-font-size-12);
+    --formulario-legend-transform: uppercase;
+    --formulario-legend-color: #999;
+    --formulario-legend-padding: 0 10px;
+    font-family: var(--formulario-legend-font);
+    font-size: var(--formulario-legend-size);
+    text-transform: var(--formulario-legend-transform);
+    color: var(--formulario-legend-color);
+    padding: var(--formulario-legend-padding);
   }
 
   &__actions {
-    --formulario__actions-grid-cols: 2fr 1fr;
-    --formulario__actions-gap: var(--mlt-sys-gap-15, 15px);
-    --formulario__actions-margin-top: var(--mlt-sys-margin-10, 10px);
+    --formulario-actions-grid-cols: 2fr 1fr;
+    --formulario-actions-gap: var(--mlt-sys-gap-15);
+    --formulario-actions-margin-top: var(--mlt-sys-margin-10);
 
     display: grid;
-    grid-template-columns: var(--formulario__actions-grid-cols); 
-    gap: var(--formulario__actions-gap);
-    margin-top: var(--formulario__actions-margin-top);
+    grid-template-columns: var(--formulario-actions-grid-cols); 
+    gap: var(--formulario-actions-gap);
+    margin-top: var(--formulario-actions-margin-top);
   }
 
   &__btn {
-    --formulario__btn-all: unset;
-    --formulario__btn-box-sizing: border-box;
-    --formulario__btn-padding: var(--mlt-sys-padding-15, 15px);
-    --formulario__btn-text-align: center;
-    --formulario__btn-radius: var(--mlt-sys-border-radius-10, 10px);
-    --formulario__btn-font: var(--mlt-sys-font-titulos);
-    --formulario__btn-weight: 600;
-    --formulario__btn-cursor: pointer;
-    --formulario__btn-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --formulario-btn-all: unset;
+    --formulario-btn-box-sizing: border-box;
+    --formulario-btn-padding: var(--mlt-sys-padding-15);
+    --formulario-btn-text-align: center;
+    --formulario-btn-radius: var(--mlt-sys-border-radius-10);
+    --formulario-btn-font: var(--mlt-sys-font-titulos);
+    --formulario-btn-weight: 600;
+    --formulario-btn-cursor: pointer;
+    --formulario-btn-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
-    all: var(--formulario__btn-all);
-    box-sizing: var(--formulario__btn-box-sizing);
-    padding: var(--formulario__btn-padding);
-    text-align: var(--formulario__btn-text-align);
-    border-radius: var(--formulario__btn-radius);
-    font-family: var(--formulario__btn-font);
-    font-weight: var(--formulario__btn-weight);
-    cursor: var(--formulario__btn-cursor);
-    transition: var(--formulario__btn-transition);
+    all: var(--formulario-btn-all);
+    box-sizing: var(--formulario-btn-box-sizing);
+    padding: var(--formulario-btn-padding);
+    text-align: var(--formulario-btn-text-align);
+    border-radius: var(--formulario-btn-radius);
+    font-family: var(--formulario-btn-font);
+    font-weight: var(--formulario-btn-weight);
+    cursor: var(--formulario-btn-cursor);
+    transition: var(--formulario-btn-transition);
 
     &--save {
-      --formulario__btn-save-bg: var(--formulario-accent);
-      --formulario__btn-save-color: var(--mlt-sys-dark);
-      --formulario__btn-save-hover-filter: brightness(0.95);
-      --formulario__btn-save-hover-transform: translateY(-2px);
-      --formulario__btn-save-hover-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-
-      background-color: var(--formulario__btn-save-bg);
-      color: var(--formulario__btn-save-color);
+      --formulario-btn-save-bg: var(--formulario-accent);
+      --formulario-btn-save-color: var(--mlt-sys-dark);
+      --formulario-btn-save-hover-filter: brightness(0.95);
+      --formulario-btn-save-hover-transform: translateY(-2px);
+      --formulario-btn-save-hover-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      background-color: var(--formulario-btn-save-bg);
+      color: var(--formulario-btn-save-color);
 
       &:hover {
-        filter: var(--formulario__btn-save-hover-filter);
-        transform: var(--formulario__btn-save-hover-transform);
-        box-shadow: var(--formulario__btn-save-hover-shadow);
+        filter: var(--formulario-btn-save-hover-filter);
+        transform: var(--formulario-btn-save-hover-transform);
+        box-shadow: var(--formulario-btn-save-hover-shadow);
       }
     }
 
     &--cancel {
-      --formulario__btn-cancel-bg: #f5f5f5;
-      --formulario__btn-cancel-color: #777;
-      --formulario__btn-cancel-hover-bg: #eee;
-      --formulario__btn-cancel-hover-color: var(--mlt-sys-dark);
+      --formulario-btn-cancel-bg: var(--mlt-sys-light);
+      --formulario-btn-cancel-color: var(--mlt-sys-gray);
+      --formulario-btn-cancel-hover-bg: var(--mlt-sys-light);
+      --formulario-btn-cancel-hover-color: var(--mlt-sys-dark);
 
-      background-color: var(--formulario__btn-cancel-bg);
-      color: var(--formulario__btn-cancel-color);
+      background-color: var(--formulario-btn-cancel-bg);
+      color: var(--formulario-btn-cancel-color);
 
       &:hover {
-        background-color: var(--formulario__btn-cancel-hover-bg);
-        color: var(--formulario__btn-cancel-hover-color);
+        background-color: var(--formulario-btn-cancel-hover-bg);
+        color: var(--formulario-btn-cancel-hover-color);
       }
     }
   }

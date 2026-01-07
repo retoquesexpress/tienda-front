@@ -49,7 +49,7 @@
   &__icon-wrapper--edit {
     --cat-card-icon-wrapper-size: var(--mlt-sys-width-50);
     --cat-card-icon-wrapper-bg: var(--mlt-sys-secondaryTransparent);
-    --cat-card-icon-wrapper-radius: 50%;
+    --cat-card-icon-wrapper-radius: var(--mlt-sys-border-radius-12);
     --cat-card-icon-wrapper-icon-size: var(--mlt-sys-width-24);
     --cat-card-icon-wrapper-icon-rotation: -15deg;
 
@@ -84,7 +84,7 @@
     --cat-card-title-font: var(--mlt-sys-font-titulos);
     --cat-card-title-size: var(--mlt-sys-font-size-22);
     --cat-card-title-color: var(--mlt-sys-dark);
-    --cat-card-title-margin: 0;
+    --cat-card-title-margin: var(--mlt-sys-margin-0);
 
     font-family: var(--cat-card-title-font);
     font-size: var(--cat-card-title-size);
