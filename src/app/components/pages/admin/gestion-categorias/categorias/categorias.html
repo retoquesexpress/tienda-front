@@ -1,38 +1,42 @@
-<div>
-  <h1 class="l-center l-center__horizontal g--font-family-titulos">Listado de categorias</h1>
-  <div class="categorias">
-    <table class="categorias__table">
+<div class="categorias">
+  <h1
+    class="l-center l-center__horizontal g--font-family-titulos g--color-primaryLight g--margin-top-50"
+  >
+    Listado de Categorías
+  </h1>
+  <table class="categorias__table">
+    <thead>
       <tr>
         <th>Id</th>
         <th>Nombre</th>
-        <th>
-          Gestión
-          <button class="categorias__button categorias__button--green g--font-family-titulos"
-            routerLink="/nueva-categoria">
-            Añadir Categoría
-          </button>
-        </th>
+        <th>Gestión</th>
       </tr>
-      <tbody>
-        @for (categoria of categorias; track categoria.idCategory){
-        <tr>
-          <td>{{ categoria.idCategory }}</td>
-          <td>{{ categoria.name }}</td>
-          <td>
-            <button class="categorias__button categorias__button--blue" routerLink="/servicios">
-              Ver
-            </button>
-            <button class="categorias__button categorias__button--red" (click)="funcionEliminar(categoria.idCategory)">
-              Borrar
-            </button>
-            <button class="categorias__button categorias__button--yellow"
-              routerLink="/modificar-categoria/{{ categoria.idCategory }}">
-              Modificar
-            </button>
-          </td>
-        </tr>
-        }
-      </tbody>
-    </table>
-  </div>
+    </thead>
+    <tbody>
+      @for (categoria of categorias; track categoria.idCategory){
+      <tr>
+        <td>{{ categoria.idCategory }}</td>
+        <td>{{ categoria.name }}</td>
+        <td>
+          <img
+            src="/assets/Iconos/addIcon.png"
+            routerLink="/nueva-categoria"
+            class="g--width-30 g--margin-10"
+          />
+          <img
+            src="/assets/Iconos/redTrashIcon.png"
+            routerLink="/eliminar/{{ categoria.idCategory }}"
+            class="g--width-30 g--margin-10"
+           (click)="funcionEliminar(categoria.idCategory)"
+          />
+          <img
+            src="/assets/Iconos/updateIcon.png"
+              routerLink="/modificar-categoria/{{ categoria.idCategory }}"
+            class="g--width-30 g--margin-10"
+          />
+        </td>
+      </tr>
+      }
+    </tbody>
+  </table>
 </div>

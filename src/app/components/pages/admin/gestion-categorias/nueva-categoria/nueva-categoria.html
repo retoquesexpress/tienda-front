@@ -1,4 +1,4 @@
-<div class="formulario">
+<!-- <div class="formulario">
   <h2 class="formulario__title">Añade Tu Categoria</h2>
   <form class="formulario__form" (ngSubmit)="postCategoria()" #myForm="ngForm">
     <input class="formulario__form-input" type="text" id="nombre" name="nombre" [(ngModel)]="categoria.name" placeholder="Nombre">
@@ -6,4 +6,48 @@
     <button class="formulario__form-button formulario__form-button--volver" type="button" routerLink="/categorias">Volver</button>
   </form>
 </div>
+ -->
 
+ <div class="l-center l-center__total g--margin-top-150">
+  <article class="cat-card">
+    <div class="cat-card__side-accent"></div>
+
+    <div class="cat-card__container">
+      <header class="cat-card__header">
+        <div class="cat-card__icon-wrapper">
+          <img src="/assets/Iconos/addIcon.png" alt="Icono Categoría" class="cat-card__icon">
+        </div>
+        <div class="cat-card__text">
+          <h2 class="cat-card__title">Nueva Categoría</h2>
+          <p class="cat-card__subtitle">Organiza tus servicios con un nombre claro</p>
+        </div>
+      </header>
+
+      <form class="cat-card__form" (ngSubmit)="postCategoria()" #myForm="ngForm">
+        <div class="cat-card__group">
+          <label class="cat-card__label">Nombre del grupo</label>
+          <div class="cat-card__input-box">
+            <input 
+              type="text" 
+              name="nombre" 
+              [(ngModel)]="categoria.name" 
+              class="cat-card__input" 
+              placeholder="Ej: Peluquería,Uñas..."
+              required
+            >
+            <span class="cat-card__focus-border"></span>
+          </div>
+        </div>
+
+        <div class="cat-card__actions">
+          <button type="submit" class="cat-card__btn cat-card__btn--submit">
+            <span>Confirmar Registro</span>
+          </button>
+          <button type="button" class="cat-card__btn cat-card__btn--back" routerLink="/categorias">
+            Cancelar
+          </button>
+        </div>
+      </form>
+    </div>
+  </article>
+</div>

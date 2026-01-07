@@ -1,14 +1,13 @@
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterLink } from '@angular/router';
 import { LoginService } from '../../../datos/Services/s-login';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 
 
 @Component({
   selector: 'app-login',
-  imports: [FormsModule],
+  imports: [FormsModule, RouterLink],
   templateUrl: './login.html',
   styleUrl: './login.scss'
 })
@@ -21,21 +20,31 @@ export class Login {
     userName: '',
     password: ''
   }
-
+  userAndPasswordErrorMessage: string | null = null;
+  passwordErrorMessage: string | null = null;
 
 
   login() {
-
+    this.userAndPasswordErrorMessage = null;
+    this.passwordErrorMessage = null;
+    
     this.loginService.login(this.LoginData.userName, this.LoginData.password).subscribe({
+      
       next: data => {
         this.loginService.saveToken(data.token);
         this.router.navigate(['/inicio']);
       },
       error: err => {
-        console.log(err);
-        alert('Usuario o contraseña incorrectos');
-        this.router.navigate(['/']);
+        console.log('Error del back:', err);
+
+      const backendMessage = err.error || '';
+      
+      if (backendMessage.includes('User not found')) {
+        this.userAndPasswordErrorMessage = 'El usuario o contraseña introducido no existe.';
+      } else if (err.status === 401 || backendMessage.includes('Password')) {
+        this.passwordErrorMessage = 'La contraseña es incorrecta.';
       }
+    }
     });
   }
 }

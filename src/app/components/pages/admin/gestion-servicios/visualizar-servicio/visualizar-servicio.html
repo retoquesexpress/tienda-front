@@ -1,13 +1,38 @@
-<div class="l-center l-center__total">
-  <div class="card">
-    <div class="card__image">
-      <img src="assets/{{ servicio.pictureUrl }}.jpg" />
+
+
+<div class="l-center l-center__total g--margin-top-100">
+  <article class="service-view">
+    
+    <div class="service-view__media">
+      <div class="service-view__badge">{{ servicio.category.name }}</div>
+      <img src="assets/{{ servicio.pictureUrl }}.jpg" [alt]="servicio.name" class="service-view__img" />
+      <div class="service-view__price-float">
+        <span class="value">{{ servicio.price }}</span><span class="symbol">€</span>
+      </div>
     </div>
-    <div class="card__content">
-      <h5 class="card__title">{{ servicio.name }}</h5>
-      <p class="card__description">{{ servicio.description }}</p>
-      <p class="card__price">{{ servicio.price }}€</p>
+
+    <div class="service-view__content">
+      <header class="service-view__header">
+        <small class="service-view__subtitle">Detalles del Servicio</small>
+        <h1 class="service-view__title">{{ servicio.name }}</h1>
+        <div class="service-view__accent-line"></div>
+      </header>
+
+      <div class="service-view__body">
+        <p class="service-view__description">
+          {{ servicio.description }}
+        </p>
+      </div>
+
+      <footer class="service-view__footer">
+        <button class="service-view__btn-back" routerLink="/servicios">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+          </svg>
+          <span>Volver al listado</span>
+        </button>
+      </footer>
     </div>
-    <button class="card__button" routerLink="/servicios">Volver</button>
-  </div>
+
+  </article>
 </div>

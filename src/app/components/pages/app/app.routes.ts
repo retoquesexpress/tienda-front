@@ -9,7 +9,6 @@ import { loginGuard } from '../../../datos/Guards/login-guard';
 import { NuevaCategoria } from '../admin/gestion-categorias/nueva-categoria/nueva-categoria';
 import { Categorias } from '../admin/gestion-categorias/categorias/categorias';
 import { ModificarCategoria } from '../admin/gestion-categorias/modificar-categoria/modificar-categoria';
-import { VisualizarCategoria } from '../admin/gestion-categorias/visualizar-categoria/visualizar-categoria';
 
 export const routes: Routes = [
     {path: '', component: Login},
@@ -19,7 +18,6 @@ export const routes: Routes = [
     {path: 'modificar/:id', component: ModificarServicio, canActivate: [loginGuard]},
     {path: 'categorias', component: Categorias, canActivate: [loginGuard]},
     {path: 'modificar-categoria/:id', component: ModificarCategoria, canActivate: [loginGuard]},
-    {path: 'visualizar-categoria/:id', component: VisualizarCategoria, canActivate: [loginGuard]},
     {path: 'nueva-categoria', component: NuevaCategoria, canActivate: [loginGuard]},
     {path: 'inicio', component: Inicio, canActivate: [loginGuard]},
 

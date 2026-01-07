@@ -1,12 +1,45 @@
-
-<!-- @if (User.role === 'ADMIN') { -->
-
-    <h1 class="l-center l-center__total g--font-family-titulos">Bienvenido a retoques EXPRESS</h1>
-    <div class="l-center l-center__total">
-    <button routerLink="/servicios" class="boton g--font-family-textos1">Gestionar Servicios</button>
-    <button routerLink="/categorias" class="boton g--font-family-textos1">Gestionar categorías</button>
+<main class="admin-home l-center l-center__total">
+  <div class="admin-home__container">
+    <div class="admin-home__bienvenida">
+      <h1 class="admin-home__title g--font-family-titulos">Panel de Administración</h1>
+      <p class="admin-home__subtitle g--font-family-textos1">
+        Bienvenido a Retoques EXPRESS. ¿Qué deseas gestionar hoy?
+      </p>
     </div>
 
-<!-- } -->
+    <div class="admin-home__content l-center">
+      <div class="admin-home__grid">
+        <div routerLink="/servicios" class="card-action">
+          <img class="card-action__image" src="/assets/Iconos/serviciosIcon.png" alt="Servicios" />
+          <h2 class="card-action__title g--font-family-titulos">Servicios</h2>
+          <p class="card-action__description g--font-family-textos1">
+            Crear, editar o eliminar los servicios ofrecidos
+          </p>
+          <button class="card-action__button g--font-family-textos1">Gestionar</button>
+        </div>
 
+        <div routerLink="/categorias" class="card-action">
+          <img
+            class="card-action__image"
+            src="/assets/Iconos/categoriasIcon.png"
+            alt="Categorías"
+          />
+          <h2 class="card-action__title g--font-family-titulos">Categorías</h2>
+          <p class="card-action__description g--font-family-textos1">
+            Organiza tus servicios por categorias
+          </p>
+          <button class="card-action__button g--font-family-textos1">Gestionar</button>
+        </div>
 
+        <div routerLink="/usuarios" class="card-action">
+          <img class="card-action__image" src="/assets/Iconos/usuariosIcon.png" alt="Usuarios" />
+          <h2 class="card-action__title g--font-family-titulos">Usuarios</h2>
+          <p class="card-action__description g--font-family-textos1">
+            Gestiona la cantidad de usuarios registrados
+          </p>
+          <button class="card-action__button g--font-family-textos1">Gestionar Proximamente</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

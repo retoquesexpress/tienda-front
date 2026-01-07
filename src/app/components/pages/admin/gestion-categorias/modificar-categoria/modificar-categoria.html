@@ -1,9 +1,42 @@
-<div class="formulario">
-  <h2 class="formulario__title">Modifica Tu Categoria</h2>
-  <div class="formulario__form">
-    <input class="formulario__form-input" type="text" id="nombre" name="nombre" [(ngModel)]="categoria.name" placeholder="Nombre">
-    <button class="formulario__form-button" (click)="putCategoria()">Modificar</button>
-    <button class="formulario__form-button formulario__form-button--volver" type="button" routerLink="/categorias">Volver</button>
+<div class="l-center l-center__total g--margin-top-150">
+  <article class="cat-card cat-card--edit">
+    <div class="cat-card__side-accent cat-card__side-accent--edit"></div>
 
-  </div>
+    <div class="cat-card__container">
+      <header class="cat-card__header">
+        <div class="cat-card__icon-wrapper cat-card__icon-wrapper--edit">
+          <img src="/assets/Iconos/updateIcon.png" alt="Edit Icon" class="cat-card__icon">
+        </div>
+        <div class="cat-card__text">
+          <h2 class="cat-card__title">Modificar Categoría</h2>
+          <span class="cat-card__id-label">ID: #{{ categoria.idCategory }}</span>
+        </div>
+      </header>
+
+      <div class="cat-card__form">
+        <div class="cat-card__group">
+          <label class="cat-card__label">Nuevo nombre de categoría</label>
+          <div class="cat-card__input-box">
+            <input 
+              type="text" 
+              name="nombre" 
+              [(ngModel)]="categoria.name" 
+              class="cat-card__input" 
+              placeholder="Nombre de la categoría"
+            >
+            <span class="cat-card__focus-indicator"></span>
+          </div>
+        </div>
+
+        <div class="cat-card__actions">
+          <button type="button" class="cat-card__btn cat-card__btn--update" (click)="putCategoria()">
+            Guardar cambios
+          </button>
+          <button type="button" class="cat-card__btn cat-card__btn--cancel" routerLink="/categorias">
+            Descartar y volver
+          </button>
+        </div>
+      </div>
+    </div>
+  </article>
 </div>

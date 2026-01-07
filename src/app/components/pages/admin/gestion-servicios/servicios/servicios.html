@@ -1,43 +1,71 @@
-<div>
-  <h1 class="l-center l-center__horizontal g--font-family-titulos">Listado de servicios</h1>
-  <div class="servicios">
-    <table class="servicios__table">
+<div class="servicios">
+  <h1
+    class="l-center l-center__horizontal g--font-family-titulos g--color-primaryLight g--margin-top-50"
+  >
+    Listado de servicios
+  </h1>
+
+  <div class="servicios__toolbar">
+    <div class="servicios__filter-group">
+      <label for="cat-filter" class="g--font-family-textos1">Filtrar por:</label>
+      <select
+        [(ngModel)]="categoriaSeleccionada"
+        (change)="onCambioFiltro()"
+        class="servicios__select"
+      >
+        <option value="Todas">Todas las categorías</option>
+        @for (categoria of categorias; track categoria.idCategory) {
+        <option [value]="categoria.idCategory">
+          {{ categoria.name }}
+        </option>
+        }
+      </select>
+    </div>
+
+    <button
+      class="servicios__button servicios__button--green g--margin-left-24"
+      routerLink="/nuevo"
+    >
+      + Añadir
+    </button>
+  </div>
+  <table class="servicios__table">
+    <thead>
       <tr>
         <th>Id</th>
         <th>Nombre</th>
-        <th>Descripcion</th>
         <th>Precio</th>
-        <th>Categoria</th>
-        <th>
-          Gestión
-          <button class="servicios__button servicios__button--green g--font-family-titulos" routerLink="/nuevo">
-            Añadir Servicio
-          </button>
-        </th>
+        <th>Categoría</th>
+        <th>Gestión</th>
       </tr>
-      <tbody>
-        @for (servicio of servicios; track servicio.idService){
-        <tr>
-          <td>{{ servicio.idService }}</td>
-          <td>{{ servicio.name }}</td>
-          <td>{{ servicio.description }}</td>
-          <td>{{ servicio.price }}€</td>
-          <td>{{ servicio.category.name}}</td>
-          <td>
-            <button class="servicios__button servicios__button--blue" routerLink="/visualizar/{{ servicio.idService }}">
-              Ver
-            </button>
-            <button class="servicios__button servicios__button--red" (click)="funcionEliminar(servicio.idService)">
-              Borrar
-            </button>
-            <button class="servicios__button servicios__button--yellow"
-              routerLink="/modificar/{{ servicio.idService }}">
-              Modificar
-            </button>
-          </td>
-        </tr>
-        }
-      </tbody>
-    </table>
-  </div>
+    </thead>
+    <tbody>
+      @for (servicio of servicios; track servicio.idService){
+      <tr>
+        <td>{{ servicio.idService }}</td>
+        <td>{{ servicio.name }}</td>
+        <td>{{ servicio.price }}€</td>
+        <td>{{ servicio.category.name }}</td>
+        <td>
+          <img
+            src="/assets/Iconos/eyeIcon.png"
+            routerLink="/visualizar/{{ servicio.idService }}"
+            class="g--width-30 g--margin-10"
+          />
+          <img
+            src="/assets/Iconos/redTrashIcon.png"
+            routerLink="/eliminar/{{ servicio.idService }}"
+            class="g--width-30 g--margin-10"
+            (click)="funcionEliminar(servicio.idService)"
+          />
+          <img
+            src="/assets/Iconos/updateIcon.png"
+            routerLink="/modificar/{{ servicio.idService }}"
+            class="g--width-30 g--margin-10"
+          />
+        </td>
+      </tr>
+      }
+    </tbody>
+  </table>
 </div>

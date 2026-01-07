@@ -1,21 +1,49 @@
-<div class="formulario">
-  <h2 class="formulario__title">Modifica Tu Servicio</h2>
-  <form class="formulario__form" (ngSubmit)="putServicio()" #myForm="ngForm">
-    <input class="formulario__form-input" type="text" id="nombre" name="nombre" [(ngModel)]="servicio.name"
-      placeholder="Nombre">
-    <input class="formulario__form-input" type="text" id="descripcion" name="descripcion"
-      [(ngModel)]="servicio.description" placeholder="Descripción">
-    <input class="formulario__form-input" type="number" id="precio" name="precio" [(ngModel)]="servicio.price"
-      placeholder="Precio">
-    <input class="formulario__form-input" type="text" id="pictureUrl" name="pictureUrl"
-      [(ngModel)]="servicio.pictureUrl" placeholder="URL de la imagen">
-    <input class="formulario__form-input" type="text" id="idCategory" name="idCategory"
-      [(ngModel)]="servicio.category.idCategory" placeholder="ID Categoría">
-    <input class="formulario__form-input" type="text" id="nombreCategoria" name="nombreCategoria"
-      [(ngModel)]="servicio.category.name" placeholder="Nombre Categoría">
-    <button class="formulario__form-button" type="submit">Modificar</button>
-    <button class="formulario__form-button formulario__form-button--volver" type="button"
-      routerLink="/servicios">Volver</button>
+<div class="l-center l-center__total g--margin-top-100">
+  <div class="formulario formulario--edit">
+    <header class="formulario__header">
+      <h2 class="formulario__title">Edición de Servicio</h2>
+      <div class="formulario__id-badge">ID: {{ servicio.idService }}</div>
+    </header>
 
-  </form>
+    <form class="formulario__form" (ngSubmit)="putServicio()" #myForm="ngForm">
+      
+      <div class="formulario__main-grid">
+        <div class="formulario__fields">
+          <div class="formulario__field-group">
+            <label class="formulario__label">Nombre del Servicio</label>
+            <input class="formulario__input" type="text" name="nombre" [(ngModel)]="servicio.name" placeholder="Ej. Corte de pelo">
+          </div>
+
+          <div class="formulario__field-group">
+            <label class="formulario__label">Descripción</label>
+            <textarea class="formulario__input formulario__input--textarea" name="description" [(ngModel)]="servicio.description"></textarea>
+          </div>
+
+          <div class="formulario__row">
+            <div class="formulario__field-group">
+              <label class="formulario__label">Precio (€)</label>
+              <input class="formulario__input" type="number" name="precio" [(ngModel)]="servicio.price">
+            </div>
+            <div class="formulario__field-group">
+              <label class="formulario__label">URL Imagen</label>
+              <input class="formulario__input" type="text" name="pictureUrl" [(ngModel)]="servicio.pictureUrl">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <fieldset class="formulario__fieldset">
+        <legend class="formulario__legend">Clasificación</legend>
+        <div class="formulario__row">
+          <input class="formulario__input formulario__input--id" type="text" name="idCategory" [(ngModel)]="servicio.category.idCategory" placeholder="ID">
+          <input class="formulario__input" type="text" name="nombreCategoria" [(ngModel)]="servicio.category.name" placeholder="Nombre Categoría">
+        </div>
+      </fieldset>
+
+      <footer class="formulario__actions">
+        <button class="formulario__btn formulario__btn--save" type="submit">Guardar Cambios</button>
+        <button class="formulario__btn formulario__btn--cancel" type="button" routerLink="/servicios">Cancelar</button>
+      </footer>
+    </form>
+  </div>
 </div>

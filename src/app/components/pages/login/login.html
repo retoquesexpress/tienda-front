@@ -1,23 +1,47 @@
-<main class="login">
-    <div class="login__container">
-        <div class="login__form">
-            <h2 class="login__title">Iniciar sesión</h2>
+<main class="login l-center l-center__total">
+  <div class="login__container">
+    <h2 class="login__title">¡Bienvenido!</h2>
+    <p class="login__subtitle">Retoques Express te recibe con cariño</p>
 
-                <div class="login_field">
-                    <label for="userName" class="login__label">Usuario</label>
-                    <input type="text" class="login__input" id="userName" placeholder="Ingresa tu usuario" required [(ngModel)]="LoginData.userName">
-                </div>
-
-
-                <div class="login_field">
-                    <label for="password" class="login__label">Contraseña</label>
-                    <input type="password" class="login__input" id="password" placeholder="Contraseña" required [(ngModel)]="LoginData.password">
-                </div>
-
-
-                <div class="login__actions">
-                    <button type="submit" class="login__button" (click)="login()">Iniciar sesión</button>
-                </div>
-        </div>
+    @if(userAndPasswordErrorMessage){
+    <div class="login__error-message">
+      {{ userAndPasswordErrorMessage }}
     </div>
+    }
+    <div class="login__field l-center l-center__total">
+      <label for="userName" class="login__label">Usuario: </label>
+      <input
+        type="text"
+        class="login__input"
+        id="userName"
+        placeholder="Ingresa tu usuario para continuar"
+        required
+        [(ngModel)]="LoginData.userName"
+      />
+    </div>
+
+    @if(passwordErrorMessage){
+    <div class="login__error-message">
+      {{ passwordErrorMessage }}
+    </div>
+    }
+
+    <div class="login__field l-center__total">
+      <label for="password" class="login__label">Contraseña: </label>
+      <input
+        type="password"
+        class="login__input"
+        id="password"
+        placeholder="Ingresa tu contraseña para continuar"
+        required
+        [(ngModel)]="LoginData.password"
+      />
+    </div>
+    <a routerLink="/registro" class="login__register">Aun no estás registrado?</a>
+
+    <div class="login__actions l-center l-center__total">
+      <button type="submit" class="login__button" (click)="login()">Iniciar sesión</button>
+      <button type="submit" class="login__button" routerLink="/inicio">Ir al inicio</button>
+    </div>
+  </div>
 </main>

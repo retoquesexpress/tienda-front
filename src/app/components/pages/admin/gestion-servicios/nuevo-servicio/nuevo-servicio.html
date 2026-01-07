@@ -1,20 +1,43 @@
-<div class="formulario">
-  <h2 class="formulario__title">Añade Tu Servicio</h2>
-  <form class="formulario__form" (ngSubmit)="postServicio()" #myForm="ngForm">
-    <input class="formulario__form-input" type="text" id="nombre" name="nombre" [(ngModel)]="servicio.name"
-      placeholder="Nombre">
-    <input class="formulario__form-input" type="text" id="descripcion" name="descripcion"
-      [(ngModel)]="servicio.description" placeholder="Descripción">
-    <input class="formulario__form-input" type="number" id="precio" name="precio" [(ngModel)]="servicio.price"
-      placeholder="Precio">
-    <input class="formulario__form-input" type="text" id="pictureUrl" name="pictureUrl"
-      [(ngModel)]="servicio.pictureUrl" placeholder="URL de la imagen">
-    <input class="formulario__form-input" type="text" id="idCategoria" name="idCategoria"
-      [(ngModel)]="servicio.category.idCategory" placeholder="ID Categoría">
-    <input class="formulario__form-input" type="text" id="nombreCategoria" name="nombreCategoria"
-      [(ngModel)]="servicio.category.name" placeholder="Nombre Categoría">
-    <button class="formulario__form-button" type="submit">Añadir</button>
-    <button class="formulario__form-button formulario__form-button--volver" type="button"
-      routerLink="/servicios">Volver</button>
-  </form>
+<div class="l-center l-center__total g--margin-top-100">
+  <div class="formulario">
+    <header class="formulario__header">
+      <h2 class="formulario__title">Nuevo Servicio</h2>
+      <p class="formulario__subtitle">Completa la información para registrar el servicio en el sistema</p>
+    </header>
+
+    <form class="formulario__form" (ngSubmit)="postServicio()" #myForm="ngForm">
+      
+      <div class="formulario__group">
+        <label class="formulario__label">Información General</label>
+        <input class="formulario__input" type="text" name="nombre" [(ngModel)]="servicio.name" placeholder="Nombre del servicio" required>
+        <textarea class="formulario__input formulario__input--textarea" name="descripcion" [(ngModel)]="servicio.description" placeholder="Describe brevemente el servicio..."></textarea>
+      </div>
+
+      <div class="formulario__row">
+        <div class="formulario__group">
+          <input class="formulario__input" type="number" name="precio" [(ngModel)]="servicio.price" placeholder="Precio (€)">
+        </div>
+        <div class="formulario__group">
+          <input class="formulario__input" type="text" name="pictureUrl" [(ngModel)]="servicio.pictureUrl" placeholder="ID de Imagen (ej: service01)">
+        </div>
+      </div>
+
+      <div class="formulario__group formulario__group--category">
+        <label class="formulario__label">Categorización</label>
+        <div class="formulario__row">
+          <input class="formulario__input formulario__input--small" type="text" name="idCategoria" [(ngModel)]="servicio.category.idCategory" placeholder="ID">
+          <input class="formulario__input" type="text" name="nombreCategoria" [(ngModel)]="servicio.category.name" placeholder="Nombre de Categoría">
+        </div>
+      </div>
+
+      <footer class="formulario__footer">
+        <button class="formulario__btn formulario__btn--submit" type="submit">
+          <span>Registrar Servicio</span>
+        </button>
+        <button class="formulario__btn formulario__btn--back" type="button" routerLink="/servicios">
+          Volver
+        </button>
+      </footer>
+    </form>
+  </div>
 </div>
