@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { Inicio } from '../inicio/inicio';
+import { InicioAdmin } from '../admin/inicio-admin/inicio';
 import { Servicios } from '../admin/gestion-servicios/servicios/servicios';
 import { VisualizarServicio } from '../admin/gestion-servicios/visualizar-servicio/visualizar-servicio';
 import { NuevoServicio } from '../admin/gestion-servicios/nuevo-servicio/nuevo-servicio';
@@ -19,7 +19,7 @@ export const routes: Routes = [
     {path: 'categorias', component: Categorias, canActivate: [loginGuard]},
     {path: 'modificar-categoria/:id', component: ModificarCategoria, canActivate: [loginGuard]},
     {path: 'nueva-categoria', component: NuevaCategoria, canActivate: [loginGuard]},
-    {path: 'inicio', component: Inicio, canActivate: [loginGuard]},
+    {path: 'inicioAdmin', component: InicioAdmin, canActivate: [loginGuard]},
 
 
 ];

@@ -32,7 +32,7 @@ export class Login {
       
       next: data => {
         this.loginService.saveToken(data.token);
-        this.router.navigate(['/inicio']);
+        this.router.navigate(['/inicioAdmin']);
       },
       error: err => {
         console.log('Error del back:', err);
