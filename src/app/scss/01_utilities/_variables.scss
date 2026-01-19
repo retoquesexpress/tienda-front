@@ -5,6 +5,7 @@ $colors: (
   secondaryLight: #d1b89a,
   secondaryTransparent:  rgba(185, 152, 128, 0.1),
   light: #f8f6f0,
+  lightTransparent: rgba(255, 255, 255, 0.9),
   dark: #0f0f0f, 
   gray: #666666,
   green: #4caf50,
@@ -18,6 +19,7 @@ $colors: (
   blueShadow: rgba(3, 153, 204, 0.4),
   yellow: #ff9800,
   yellowShadow: rgba(255, 152, 0, 0.4),
+
 );
 
 $font-sizes: (
@@ -77,6 +79,7 @@ $width-sizes: (
   500: 500px,
   550: 550px,
   600: 600px,
+  768: 768px,
   900: 900px,
   1000: 1000px,
   10p: 10%,
@@ -102,6 +105,7 @@ $border-radiuses: (
   20: 20px,
   30: 30px,
   50: 50px,
+  50p: 50%,
 );
 
 $border-widths: (
