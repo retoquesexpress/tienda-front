@@ -12,11 +12,13 @@ export class App {
   protected readonly title = signal('tienda-front');
 
   loginService = inject(LoginService)
-  logged=false;
+  logged = false;
 
   ngOnInit() {
     this.loginService.isLogged$.subscribe(isLogged => {
       this.logged = isLogged;
     });
+    // Forzar comprobación inicial de login
+    this.loginService.isRegistered();
   }
 }

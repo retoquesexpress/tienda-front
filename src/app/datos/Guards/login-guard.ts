@@ -7,9 +7,10 @@ export const loginGuard: CanActivateFn = () => {
   const loginService = inject(LoginService);
   const router = inject(Router);
 
-  if (loginService.isRegistered()) {
+  if (loginService.isAdmin()) {
     return true;
   } else {
+    // Si no es admin, redirigir al login (o inicio)
     router.navigate(['/']);
     return false;
   }

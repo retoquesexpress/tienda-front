@@ -1,27 +1,30 @@
-<!-- HEADER USUARIO -->
-<!-- <header class="header">
-    <img class="header__logo" routerLink="/" src="/assets/LogoExpress.png">
+@if (loginService.isAdmin()) {
+    <header class="header g--background-admin">
+        <img class="header__logo" routerLink="/inicioAdmin" src="/assets/LogoExpress.png">
+        <h1 class="g--color-light g--font-size-5 g--font-family-titulos">Panel de Administración</h1>
 
-    <nav>
-        <ul class="header__nav-list">
-            <li class="header__nav-item"><a class="header__nav-link" routerLink="/">Inicio</a></li>
-            <li class="header__nav-item"><a class="header__nav-link" routerLink="/reservas">Reservas</a></li>
-            <li class="header__nav-item"><a class="header__nav-link" routerLink="/uñas">Uñas</a></li>
-            <li class="header__nav-item"><a class="header__nav-link" routerLink="/maquillaje">Maquillaje</a></li>
-            <li class="header__nav-item"><a class="header__nav-link" routerLink="/peluqueria">Peluqueria</a></li>
-            <li class="header__nav-item"><a class="header__nav-link" routerLink="/login">Login</a></li>
-        </ul>
-    </nav>
-</header> -->
-<!-- HEADER ADMIN -->
+        <nav>
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a class="header__nav-link" routerLink="/servicios">Gestión Servicios</a>
+                </li>
+                <li class="header__nav-item"><a class="header__nav-link" routerLink="/categorias">Gestión Categorías</a>
+                </li>
+                <li class="header__nav-item"><a class="header__nav-link" (click)="loginService.logOut()"
+                        routerLink="/">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+} @else {
     <header class="header">
-    <img class="header__logo" routerLink="/inicioAdmin" src="/assets/LogoExpress.png">
-    <h1 class="g--color-light g--font-size-5 g--font-family-titulos">Admin Panel</h1>
-    <ul class="header__nav-list">
-    <li class="header__nav-item"><a class="header__nav-link" routerLink="/servicios">Gestión Servicios</a></li>
-    </ul>
-      <ul class="header__nav-list">
-    <li class="header__nav-item"><a class="header__nav-link" routerLink="/categorias">Gestión Categorias</a></li>
-    </ul>
-</header>
+        <img class="header__logo" routerLink="/inicio" src="/assets/LogoExpress.png">
+        <nav>
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a class="header__nav-link" routerLink="/inicio">Inicio</a></li>
+                <li class="header__nav-item"><a class="header__nav-link" routerLink="/reservas">Mis Reservas</a></li>
+                <li class="header__nav-item"><a class="header__nav-link" (click)="loginService.logOut()"
+                        routerLink="/">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+}
 

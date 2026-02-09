@@ -19,6 +19,7 @@ export class LoginService {
 
     saveToken(token: string) {
         localStorage.setItem('Token', token);
+        this.isLogged.next(true);
     }
 
     getToken(): string | null {

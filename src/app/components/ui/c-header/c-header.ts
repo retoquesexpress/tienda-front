@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from "@angular/router";
+import { LoginService } from '../../../datos/Services/s-login';
 
 @Component({
   selector: 'c-header',
@@ -8,5 +9,5 @@ import { RouterLink } from "@angular/router";
   styleUrl: './c-header.scss',
 })
 export class CHeader {
-
+  loginService = inject(LoginService);
 }
