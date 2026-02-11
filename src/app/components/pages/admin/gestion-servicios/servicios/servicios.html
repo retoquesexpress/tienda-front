@@ -1,18 +1,17 @@
 <div class="servicios">
-  <h1
-    class="l-center l-center__horizontal g--font-family-titulos g--color-primaryLight g--margin-top-50"
-  >
+  @if (showAlert) {
+  <div class="alert" [ngClass]="'alert--' + alertType">
+    {{ alertMessage }}
+  </div>
+  }
+  <h1 class="l-center l-center__horizontal g--font-family-titulos g--color-primaryLight g--margin-top-50">
     Listado de servicios
   </h1>
 
   <div class="servicios__toolbar">
     <div class="servicios__filter-group">
       <label for="cat-filter" class="g--font-family-textos1">Filtrar por:</label>
-      <select
-        [(ngModel)]="categoriaSeleccionada"
-        (change)="onCambioFiltro()"
-        class="servicios__select"
-      >
+      <select [(ngModel)]="categoriaSeleccionada" (change)="onCambioFiltro()" class="servicios__select">
         <option value="Todas">Todas las categorías</option>
         @for (categoria of categorias; track categoria.idCategory) {
         <option [value]="categoria.idCategory">
@@ -22,10 +21,7 @@
       </select>
     </div>
 
-    <button
-      class="servicios__button servicios__button--green g--margin-left-24"
-      routerLink="/nuevo"
-    >
+    <button class="servicios__button servicios__button--green g--margin-left-24" routerLink="/nuevo">
       + Añadir
     </button>
   </div>
@@ -47,22 +43,12 @@
         <td>{{ servicio.price }}€</td>
         <td>{{ servicio.category.name }}</td>
         <td>
-          <img
-            src="/assets/Iconos/eyeIcon.png"
-            routerLink="/visualizar/{{ servicio.idService }}"
-            class="g--width-30 g--margin-10"
-          />
-          <img
-            src="/assets/Iconos/redTrashIcon.png"
-            routerLink="/eliminar/{{ servicio.idService }}"
-            class="g--width-30 g--margin-10"
-            (click)="funcionEliminar(servicio.idService)"
-          />
-          <img
-            src="/assets/Iconos/updateIcon.png"
-            routerLink="/modificar/{{ servicio.idService }}"
-            class="g--width-30 g--margin-10"
-          />
+          <img src="/assets/Iconos/eyeIcon.png" routerLink="/visualizar/{{ servicio.idService }}"
+            class="g--width-30 g--margin-10" />
+          <img src="/assets/Iconos/redTrashIcon.png" routerLink="/eliminar/{{ servicio.idService }}"
+            class="g--width-30 g--margin-10" (click)="funcionEliminar(servicio.idService)" />
+          <img src="/assets/Iconos/updateIcon.png" routerLink="/modificar/{{ servicio.idService }}"
+            class="g--width-30 g--margin-10" />
         </td>
       </tr>
       }

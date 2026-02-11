@@ -1,4 +1,9 @@
 <div class="l-center l-center__total g--margin-top-100">
+  @if (showAlert) {
+  <div class="alert" [ngClass]="'alert--' + alertType">
+    {{ alertMessage }}
+  </div>
+  }
   <div class="formulario">
     <header class="formulario__header">
       <h2 class="formulario__title">Nuevo Servicio</h2>
@@ -6,28 +11,34 @@
     </header>
 
     <form class="formulario__form" (ngSubmit)="postServicio()" #myForm="ngForm">
-      
+
       <div class="formulario__group">
         <label class="formulario__label">Información General</label>
-        <input class="formulario__input" type="text" name="nombre" [(ngModel)]="servicio.name" placeholder="Nombre del servicio" required>
-        <textarea class="formulario__input formulario__input--textarea" name="descripcion" [(ngModel)]="servicio.description" placeholder="Describe brevemente el servicio..."></textarea>
+        <input class="formulario__input" type="text" name="nombre" [(ngModel)]="servicio.name"
+          placeholder="Nombre del servicio" required>
+        <textarea class="formulario__input formulario__input--textarea" name="descripcion"
+          [(ngModel)]="servicio.description" placeholder="Describe brevemente el servicio..."></textarea>
       </div>
 
       <div class="formulario__row">
         <div class="formulario__group">
-          <input class="formulario__input" type="number" name="precio" [(ngModel)]="servicio.price" placeholder="Precio (€)">
+          <input class="formulario__input" type="number" name="precio" [(ngModel)]="servicio.price"
+            placeholder="Precio (€)">
         </div>
         <div class="formulario__group">
-          <input class="formulario__input" type="text" name="pictureUrl" [(ngModel)]="servicio.pictureUrl" placeholder="ID de Imagen (ej: service01)">
+          <input class="formulario__input" type="text" name="pictureUrl" [(ngModel)]="servicio.pictureUrl"
+            placeholder="ID de Imagen (ej: service01)">
         </div>
       </div>
 
       <div class="formulario__group formulario__group--category">
         <label class="formulario__label">Categorización</label>
-        <div class="formulario__row">
-          <input class="formulario__input formulario__input--small" type="text" name="idCategoria" [(ngModel)]="servicio.category.idCategory" placeholder="ID">
-          <input class="formulario__input" type="text" name="nombreCategoria" [(ngModel)]="servicio.category.name" placeholder="Nombre de Categoría">
-        </div>
+        <select class="formulario__input" name="categoria" [(ngModel)]="selectedCategoryId" required>
+          <option value="0" disabled selected>Selecciona una categoría</option>
+          @for (categoria of categorias; track categoria.idCategory) {
+          <option [value]="categoria.idCategory">{{ categoria.name }}</option>
+          }
+        </select>
       </div>
 
       <footer class="formulario__footer">

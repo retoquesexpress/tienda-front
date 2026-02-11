@@ -8,7 +8,12 @@
 </div>
  -->
 
- <div class="l-center l-center__total g--margin-top-150">
+<div class="l-center l-center__total g--margin-top-150">
+  @if (showAlert) {
+  <div class="alert" [ngClass]="'alert--' + alertType">
+    {{ alertMessage }}
+  </div>
+  }
   <article class="cat-card">
     <div class="cat-card__side-accent"></div>
 
@@ -27,14 +32,8 @@
         <div class="cat-card__group">
           <label class="cat-card__label">Nombre del grupo</label>
           <div class="cat-card__input-box">
-            <input 
-              type="text" 
-              name="nombre" 
-              [(ngModel)]="categoria.name" 
-              class="cat-card__input" 
-              placeholder="Ej: Peluquería,Uñas..."
-              required
-            >
+            <input type="text" name="nombre" [(ngModel)]="categoria.name" class="cat-card__input"
+              placeholder="Ej: Peluquería,Uñas..." required>
             <span class="cat-card__focus-border"></span>
           </div>
         </div>

@@ -1,4 +1,9 @@
 <div class="l-center l-center__total g--margin-top-150">
+  @if (showAlert) {
+  <div class="alert" [ngClass]="'alert--' + alertType">
+    {{ alertMessage }}
+  </div>
+  }
   <article class="cat-card cat-card--edit">
     <div class="cat-card__side-accent cat-card__side-accent--edit"></div>
 
@@ -17,13 +22,8 @@
         <div class="cat-card__group">
           <label class="cat-card__label">Nuevo nombre de categoría</label>
           <div class="cat-card__input-box">
-            <input 
-              type="text" 
-              name="nombre" 
-              [(ngModel)]="categoria.name" 
-              class="cat-card__input" 
-              placeholder="Nombre de la categoría"
-            >
+            <input type="text" name="nombre" [(ngModel)]="categoria.name" class="cat-card__input"
+              placeholder="Nombre de la categoría">
             <span class="cat-card__focus-indicator"></span>
           </div>
         </div>

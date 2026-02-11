@@ -11,15 +11,15 @@ import { Categorias } from '../admin/gestion-categorias/categorias/categorias';
 import { ModificarCategoria } from '../admin/gestion-categorias/modificar-categoria/modificar-categoria';
 
 export const routes: Routes = [
-    {path: '', component: Login},
-    {path: 'servicios', component: Servicios, canActivate: [loginGuard]},
-    {path: 'nuevo', component: NuevoServicio, canActivate: [loginGuard]},
-    {path: 'visualizar/:id', component: VisualizarServicio, canActivate: [loginGuard]},
-    {path: 'modificar/:id', component: ModificarServicio, canActivate: [loginGuard]},
-    {path: 'categorias', component: Categorias, canActivate: [loginGuard]},
-    {path: 'modificar-categoria/:id', component: ModificarCategoria, canActivate: [loginGuard]},
-    {path: 'nueva-categoria', component: NuevaCategoria, canActivate: [loginGuard]},
-    {path: 'inicioAdmin', component: InicioAdmin, canActivate: [loginGuard]},
+    { path: '', component: Login },
+    { path: 'servicios', component: Servicios, canActivate: [loginGuard] },
+    { path: 'nuevo', component: NuevoServicio, canActivate: [loginGuard] },
+    { path: 'visualizar/:id', component: VisualizarServicio, canActivate: [loginGuard] },
+    { path: 'modificar/:id', component: ModificarServicio, canActivate: [loginGuard] },
+    { path: 'categorias', component: Categorias, canActivate: [loginGuard] },
+    { path: 'modificar-categoria/:id', component: ModificarCategoria, canActivate: [loginGuard] },
+    { path: 'nueva-categoria', component: NuevaCategoria, canActivate: [loginGuard] },
+    { path: 'inicioAdmin', component: InicioAdmin, canActivate: [loginGuard] },
 
 
 ];

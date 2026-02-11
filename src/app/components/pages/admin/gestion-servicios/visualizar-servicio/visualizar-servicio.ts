@@ -18,9 +18,32 @@ export class VisualizarServicio {
   ngOnInit() {
     this.route.params.subscribe(params =>
       this.mihttp.getServiceById(params["id"]).subscribe({
-        next: data => this.servicio = data,
+        next: data => {
+          this.servicio = {
+            ...data,
+            pictureUrl: this.getFullPictureUrl(data)
+          };
+        },
         error: err => console.log(err)
       }));
+  }
+
+  private getFullPictureUrl(service: any): string {
+    if (!service || !service.pictureUrl) return '';
+
+    const pictureUrl = service.pictureUrl;
+    if (pictureUrl.startsWith('assets/') || pictureUrl.startsWith('http') || pictureUrl.startsWith('/assets/')) {
+      return pictureUrl;
+    }
+
+    let folder = '';
+    const catId = service.category?.idCategory || (typeof service.idCategory === 'number' ? service.idCategory : null);
+
+    if (catId === 1) folder = 'unas';
+    else if (catId === 2) folder = 'maquillaje';
+    else if (catId === 3) folder = 'peluqueria';
+
+    return folder ? `/assets/${folder}/${pictureUrl}` : `/assets/${pictureUrl}`;
   }
 
 }

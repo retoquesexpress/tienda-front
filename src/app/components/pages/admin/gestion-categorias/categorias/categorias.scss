@@ -13,6 +13,7 @@
   --categorias-bg-container: var(--mlt-sys-secondaryLight);
 
   --categorias-table-width: var(--mlt-sys-width-100p);
+
   --categorias-table-border-spacing: 0;
   --categorias-table-bg: var(--mlt-sys-light);
   --categorias-table-border-radius: var(--mlt-sys-border-radius-15);
@@ -52,7 +53,7 @@
   --categorias-select-bg: var(--mlt-sys-light);
 
   --categorias-button-padding: var(--mlt-sys-padding-8);
-  --categorias-button-width: var(--mlt-sys-width-10p);
+  --categorias-button-width: auto;
   --categorias-button-font-size: var(--mlt-sys-font-size-12);
   --categorias-button-font-weight: var(--mlt-sys-font-weight-600);
   --categorias-button-font-family: var(--mlt-sys-font-family-titulos);
@@ -72,7 +73,22 @@
   background-color: var(--categorias-bg-container);
   overflow-x: auto;
 
+  // &__table-wrapper {
+  //    position: relative;
+  //    margin-bottom: var(--categorias-table-margin-bottom);
+  // }
+  &__table-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
   &__table {
+    width: 900px;
+    max-width: 100%;
+    margin: 0;
+    table-layout: fixed;
+
     width: var(--categorias-table-width);
     border-spacing: var(--categorias-table-border-spacing);
     background-color: var(--categorias-table-bg);
@@ -91,14 +107,33 @@
       text-align: center;
       font-weight: var(--categorias-table-th-font-weight);
       text-transform: uppercase;
+
+      &.categorias__header-id {
+        width: 10%;
+      }
+
+      &.categorias__header-nombre {
+        width: 50%;
+        text-align: center;
+      }
+
+      &.categorias__header-gestion {
+        width: 25%;
+      }
+
+      &.categorias__header-add {
+        width: 15%;
+        text-align: right;
+        padding-right: 20px;
+      }
     }
 
     td {
       padding: var(--categorias-padding-cell);
-      border-bottom: var(--categorias-table-td-border-width) solid
-        var(--categorias-table-td-border-color);
+      border-bottom: var(--categorias-table-td-border-width) solid var(--categorias-table-td-border-color);
       vertical-align: middle;
       color: var(--categorias-table-td-color);
+      text-align: center;
     }
 
     tr:hover {
@@ -195,18 +230,23 @@
   0% {
     transform: translate(1px, 1px) rotate(0deg);
   }
+
   20% {
     transform: translate(-1px, -1px) rotate(-1deg);
   }
+
   40% {
     transform: translate(-1px, 1px) rotate(1deg);
   }
+
   60% {
     transform: translate(1px, -1px) rotate(-1deg);
   }
+
   80% {
     transform: translate(-1px, 1px) rotate(1deg);
   }
+
   100% {
     transform: translate(1px, 1px) rotate(0deg);
   }

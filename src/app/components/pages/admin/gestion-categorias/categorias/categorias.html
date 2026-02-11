@@ -1,42 +1,41 @@
 <div class="categorias">
-  <h1
-    class="l-center l-center__horizontal g--font-family-titulos g--color-primaryLight g--margin-top-50"
-  >
+  @if (showAlert) {
+  <div class="alert" [ngClass]="'alert--' + alertType">
+    {{ alertMessage }}
+  </div>
+  }
+  <h1 class="l-center l-center__horizontal g--font-family-titulos g--color-primaryLight g--margin-top-50">
     Listado de Categorías
   </h1>
-  <table class="categorias__table">
-    <thead>
-      <tr>
-        <th>Id</th>
-        <th>Nombre</th>
-        <th>Gestión</th>
-      </tr>
-    </thead>
-    <tbody>
-      @for (categoria of categorias; track categoria.idCategory){
-      <tr>
-        <td>{{ categoria.idCategory }}</td>
-        <td>{{ categoria.name }}</td>
-        <td>
-          <img
-            src="/assets/Iconos/addIcon.png"
-            routerLink="/nueva-categoria"
-            class="g--width-30 g--margin-10"
-          />
-          <img
-            src="/assets/Iconos/redTrashIcon.png"
-            routerLink="/eliminar/{{ categoria.idCategory }}"
-            class="g--width-30 g--margin-10"
-           (click)="funcionEliminar(categoria.idCategory)"
-          />
-          <img
-            src="/assets/Iconos/updateIcon.png"
-              routerLink="/modificar-categoria/{{ categoria.idCategory }}"
-            class="g--width-30 g--margin-10"
-          />
-        </td>
-      </tr>
-      }
-    </tbody>
-  </table>
+  <div class="categorias__table-wrapper">
+    <table class="categorias__table">
+      <thead>
+        <tr>
+          <th class="categorias__header-id">ID</th>
+          <th class="categorias__header-nombre">NOMBRE</th>
+          <th class="categorias__header-gestion">GESTIÓN</th>
+          <th class="categorias__header-add">
+            <button class="categorias__button categorias__button--add" routerLink="/nueva-categoria">
+              + Añadir
+            </button>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (categoria of categorias; track categoria.idCategory){
+        <tr>
+          <td>{{ categoria.idCategory }}</td>
+          <td>{{ categoria.name }}</td>
+          <td>
+            <img src="/assets/Iconos/redTrashIcon.png" routerLink="/eliminar/{{ categoria.idCategory }}"
+              class="g--width-30 g--margin-10" (click)="funcionEliminar(categoria.idCategory)" />
+            <img src="/assets/Iconos/updateIcon.png" routerLink="/modificar-categoria/{{ categoria.idCategory }}"
+              class="g--width-30 g--margin-10" />
+          </td>
+          <td></td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
 </div>

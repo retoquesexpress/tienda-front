@@ -1,4 +1,10 @@
+@if (servicio) {
 <div class="l-center l-center__total g--margin-top-100">
+  @if (showAlert) {
+  <div class="alert" [ngClass]="'alert--' + alertType">
+    {{ alertMessage }}
+  </div>
+  }
   <div class="formulario formulario--edit">
     <header class="formulario__header">
       <h2 class="formulario__title">Edición de Servicio</h2>
@@ -6,17 +12,19 @@
     </header>
 
     <form class="formulario__form" (ngSubmit)="putServicio()" #myForm="ngForm">
-      
+
       <div class="formulario__main-grid">
         <div class="formulario__fields">
           <div class="formulario__field-group">
             <label class="formulario__label">Nombre del Servicio</label>
-            <input class="formulario__input" type="text" name="nombre" [(ngModel)]="servicio.name" placeholder="Ej. Corte de pelo">
+            <input class="formulario__input" type="text" name="nombre" [(ngModel)]="servicio.name"
+              placeholder="Ej. Corte de pelo">
           </div>
 
           <div class="formulario__field-group">
             <label class="formulario__label">Descripción</label>
-            <textarea class="formulario__input formulario__input--textarea" name="description" [(ngModel)]="servicio.description"></textarea>
+            <textarea class="formulario__input formulario__input--textarea" name="description"
+              [(ngModel)]="servicio.description"></textarea>
           </div>
 
           <div class="formulario__row">
@@ -34,10 +42,12 @@
 
       <fieldset class="formulario__fieldset">
         <legend class="formulario__legend">Clasificación</legend>
-        <div class="formulario__row">
-          <input class="formulario__input formulario__input--id" type="text" name="idCategory" [(ngModel)]="servicio.category.idCategory" placeholder="ID">
-          <input class="formulario__input" type="text" name="nombreCategoria" [(ngModel)]="servicio.category.name" placeholder="Nombre Categoría">
-        </div>
+        <select class="formulario__input" name="categoria" [(ngModel)]="selectedCategoryId" required>
+          <option value="0" disabled>Selecciona una categoría</option>
+          @for (categoria of categorias; track categoria.idCategory) {
+          <option [value]="categoria.idCategory">{{ categoria.name }}</option>
+          }
+        </select>
       </fieldset>
 
       <footer class="formulario__actions">
@@ -47,3 +57,4 @@
     </form>
   </div>
 </div>
+}
